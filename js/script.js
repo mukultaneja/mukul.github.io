@@ -1,6 +1,6 @@
 $("document").ready(function(){
-	var skills = { 'python' : 0.6, 'php' : 0.7, 'linux' : 0.5,
-				 'db' : 0.5, 'sql' : 0.5, 'js' : 0.7, };
+	var skills = { 'python' : 0.6, 'dv': 0.3, 'php' : 0.7, 'linux' : 0.5,
+				 'db' : 0.5, 'sql' : 0.5, 'js' : 0.7, 'css': 0.4,};
 
 	var colors = ['red', 'orange', 'green', 'blue', 'yellow', 'purple']
 
