@@ -6,8 +6,10 @@ $("document").ready(function(){
 
 	var offset = 600;
 	var duration = 300;
+	var to_year = new Date().getFullYear();
 
 	$('.sidebar').toggle('slide');
+	$('div.copyright center, div.footer footer').html('&copy; Mukul Taneja - ' + to_year);
 
 	$('.skills-link').click(function(e){
 		e.preventDefault();
