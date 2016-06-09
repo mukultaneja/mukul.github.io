@@ -80,8 +80,12 @@ body {
     margin-left: 2px;
 }
 
-#skills, #about-me, #projects, #contact-me  {
+#skills, #about-me, #projects  {
 	height: 800px;
+}
+
+#contact-me {
+	height: 643px;
 }
 
 #skills, #skills-text {
