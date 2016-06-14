@@ -3,89 +3,59 @@
 	<head>
 		<title>Mac-Home</title>
 		<link rel="shortcut icon" href="images/favicon.png"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<meta name="viewport" content="width = device-width, initial-scale=1">	
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-		<link rel="stylesheet" media="screen and (min-device-width: 1200px)" href="css/style-site.css" />
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="bower_components/jquery-circle-progress/dist/circle-progress.js"></script>	
+		<link rel="stylesheet" media="screen and (min-device-width: 1200px)" href="css/dstyle.css" />
+		<link rel="stylesheet" media="screen and (max-device-width: 480px)" href="css/mstyle.css" />	
 	</head>
 	<body>
 		<!-- page header-->
-		<div class="container-fluid header">
-			<div class="col-md-4">
-				<h3>
-					&lt;h2&gt; Hello world &lt;/h2&gt;
-		 		</h3>
-		 	</div>
-		 	<div class='col-md-4'>
-		 		<h3 class="text-center">
-					Mukul Taneja
-		 		</h3>
-		 	</div>
-	 		<div class='col-md-4'>
-	 			<h3>
-					self.transport('hi world')
-		 		</h3>
-	 		</div>
-		</div>
-		<!-- button to show the menu -->
-		<button type="button" class="sidebar-menu-btn btn btn-default" aria-label="Left Align">
-			<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-		</button>
-		<br />
-		<!-- sidebar section of main page-->
-		<div class="sidebar">
-			<div class="open-sidebar">
-				<span>$('.sidebar-menu-btn').click(function(e){
-					$('.sidebar').toggle("slide");
-				})</span>
-			</div>
-			<ul class="list-group">
-			  <li class="list-group-item about-sidebar">
-			  	<a class="about-me-link" href="#about-me">About Me</a>
-			  </li>
-			  <li class="list-group-item skill-sidebar">
-			  	<a class="skills-link" href="#skills">Skills</a>
-			  </li>
-			  <li class="list-group-item project-sidebar">
-			  	<a class="project-link" href="#projects">Projects</a>
-			  </li>
-			  <li class="list-group-item article-sidebar">
-			  	<a>Articles</a>
-			  </li>
-			  <li class="list-group-item contact-sidebar">
-			  	<a class="contact-me-link" href="#contact-me">Contact Me</a>
-			  </li>
-			</ul>
-			<div class="copyright">
-				<center> 
-				</center>
-			</div>
-		</div>
-		<div class="container">
-			<div class="main">
-				<!-- home section of main page-->
-				<div class="home">
-					<div class="row">
-						<div class="col-md-4"></div>
-						<div class="col-md-4">
-							<center>
-								<figure class="figure">
-									  <img src="images/mukul.png" alt="mukul" class="img-rounded img-responsive" />
-									  <br />
-									  <figcaption class="figure-caption tag-class">
-									  	Associate Data Specialist <br />Gramener
-									  </figcaption>
-								</figure>
-							</center>
-						</div>
-						<div class="col-md-4"></div>
+		<div class="container-fluid">
+			<div class="row header">
+				<div class="col-md-3 col-xs-12">
+			 		<h2 class="text-center">
+						Mukul Taneja
+			 		</h2>
+			 	</div>
+			 	<div class="col-md-3 col-xs-0"></div>
+			 	<div class="col-md-6 col-xs-12">
+			 		<div class="links-div">
+					  	<a class="about-me-link" href="#about-me">About Me</a>
+					  	&nbsp;
+					  	<a class="skills-link" href="#skills">Skills</a>
+					  	&nbsp;
+					  	<a class="project-link" href="#projects">Projects</a>
+					  	&nbsp;
+					  	<a>Articles</a>
+					  	&nbsp;
+					  	<a class="contact-me-link" href="#contact-me">Contact Me</a>
 					</div>
-					<br />
-					<div class="container-fluid text-justiy">
-						<div class="col-md-2"></div>
-						<div class="col-md-10">
+			 	</div>
+		 	</div>
+		</div>
+		<!-- Main container -->
+		<div class="container-fluid">
+			<!-- home section of main page-->
+			<div class="home">
+				<div class="row">
+					<div class="col-md-4 col-xs-4"></div>
+					<div class="col-md-4 col-xs-4">
+						<center>
+							<figure class="figure">
+								  <img src="images/mukul.png" alt="mukul" class="img-rounded img-responsive" />
+								  <br />
+								  <figcaption class="figure-caption tag-class">
+								  	<b>Associate Data Specialist <br />Gramener</b>
+								  </figcaption>
+							</figure>
+						</center>
+					</div>
+					<div class="col-md-4 col-xs-4"></div>
+				</div>
+				<br />
+				<div class="container-fluid text-justiy">
+					<div class="row">
+						<div class="col-md-12 col-xs-12">
 							<blockquote>
 			  					<p>
 			  						<b>Mukul Taneja</b>, a person who loves technology and has a great amount of
@@ -100,158 +70,172 @@
 			  						I am releasing my personal website, where I will be sharing my latest workings and
 			  						learning with others so that others can also have an idea of new things.
 			  					</p> 
-			  					</p>
-							</blockquote>
+			  				</blockquote>
 						</div>
 					</div>
 				</div>
-				<!-- about me section of main page-->
-				<div id="about-me">
-					<div class="container about-me-heading">
+			</div>
+			<!-- about me section of main page-->
+			<div class="container" id="about-me">
+				<div class="row">
+					<div class="about-me-heading">
 						<h2 class="text-center">
 							About Me
 						</h2>
 					</div>
-					<div id="about-me-text">
-					</div>
 				</div>
-				<!-- skills section of main page-->
-				<div id="skills">
-					<div class="container skill-heading">
+				<div class="row" id="about-me-text">
+				</div>
+			</div>
+			<!-- skills section of main page-->
+			<div class="container" id="skills">
+				<div class="row">
+					<div class="skill-heading">
 						<h2 class="text-center">
 							Programming Skills
 						</h2>
 					</div>
-					<div class="container" id="skills-text">
-						<div class="col-md-4 ">
-		    				<div id='python-skill' class="text-center"></div>
-		    				<h4 class="text-center">Python</h4>
-		    			</div>
-		    			<div class="col-md-4">
-							<div id='dv-skill' class="text-center"></div>
-							<h4 class="text-center">Data Visulaization</h4>
-						</div>
-		    			<div class="col-md-4">
-		    				<div id='php-skill' class="text-center"></div>
-		    				<h4 class="text-center">PHP</h4>
-		    			</div>
-		    			<div class="col-md-4">
-		    				<div id='linux-skill' class="text-center"></div>
-		    				<h4 class="text-center">Linux</h4>
-		    			</div>
-		    			<div class="col-md-4">
-		    				<div id='db-skill' class="text-center"></div>
-		    				<h4 class="text-center">Database</h4>
-		    			</div>
-		    			<div class="col-md-4">
-		    				<div id='sql-skill' class="text-center"></div>
-		    				<h4 class="text-center">SQL</h4>
-		    			</div>
-						<div class="col-md-4">
-							<div id='js-skill' class="text-center"></div>
-							<h4 class="text-center">Jquery</h4>
-						</div>
-						<div class="col-md-4">
-							<div id='css-skill' class="text-center"></div>
-							<h4 class="text-center">Bootstrap</h4>
-						</div>
 				</div>
-				<!-- project section of main page-->
-				<div id="projects">
-					<div class="container project-heading">
+				<div class="row skills-text">
+					<div class="col-md-4 col-xs-4">
+	    				<div id='python-skill' class="text-center"></div>
+	    				<h4 class="text-center">Python</h4>
+	    			</div>
+	    			<div class="col-md-4 col-xs-4">
+						<div id='dv-skill' class="text-center"></div>
+						<h4 class="text-center">Data Visulaization</h4>
+					</div>
+	    			<div class="col-md-4 col-xs-4">
+	    				<div id='php-skill' class="text-center"></div>
+	    				<h4 class="text-center">PHP</h4>
+	    			</div>
+	    		</div>
+	    		<div class="row skills-text">
+	    			<div class="col-md-4 col-xs-4">
+	    				<div id='linux-skill' class="text-center"></div>
+	    				<h4 class="text-center">Linux</h4>
+	    			</div>
+	    			<div class="col-md-4 col-xs-4">
+	    				<div id='db-skill' class="text-center"></div>
+	    				<h4 class="text-center">Database</h4>
+	    			</div>
+	    			<div class="col-md-4 col-xs-4">
+	    				<div id='sql-skill' class="text-center"></div>
+	    				<h4 class="text-center">SQL</h4>
+	    			</div>
+					<div class="col-md-4 col-xs-4">
+						<div id='js-skill' class="text-center"></div>
+						<h4 class="text-center">Jquery</h4>
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<div id='css-skill' class="text-center"></div>
+						<h4 class="text-center">Bootstrap</h4>
+					</div>
+				</div>
+			</div>
+			<!-- project section of main page-->
+			<div class="container" id="projects">
+				<div class="row">
+					<div class="project-heading">
 						<h2 class="text-center">
 							Projects
 						</h2>
 					</div>
-					<div id="project-text">
-					</div>
 				</div>
-				<!-- contact section of main page-->
-				<div id="contact-me">
-					<div class="container contact-me-heading">
+				<div class="row" id="project-text">
+				</div>
+			</div>
+			<!-- contact section of main page-->
+			<div class="container" id="contact-me">
+				<div class="row">
+					<div class="contact-me-heading">
 						<h2 class="text-center">
 							Contact Me
 						</h2>
 					</div>
-					<div class="container" id="contact-me-text">
-						<div class="col-md-2 facebook">
-							<center>
-								<figure class="figure">
-									<a href="https://www.facebook.com/Mac.theCreator" target="_blank">
-										<img src="images/facebook-icon.png" alt="facebook-icon" class="img-rounded img-responsive" />
-									</a>
-									<br />
-									<figcaption class="figure-caption tag-class">
-									  Facebook
-									</figcaption>
-								</figure>
-							</center>
-						</div>
-						<div class="col-md-2 linkedin">
-							<center>
-								<figure class="figure">
-									<a href="https://in.linkedin.com/in/mukul-taneja-855b1733" target="_blank">
-										<img src="images/linkedin-icon.png" alt="linkedin-icon" class="img-rounded img-responsive" />
-									</a>
-									<br />
-									<figcaption class="figure-caption tag-class">
-									  Linkedin
-									</figcaption>
-								</figure>
-							</center>
-						</div>
-						<div class="col-md-2 gmail">
-							<center>
-								<figure class="figure">
-									<a href="mailto:mukultaneja91@gmail.com">
-										<img src="images/mail-icon.png" alt="gmail-icon" class="img-rounded img-responsive" />
-									</a>
-									<br />
-									<figcaption class="figure-caption tag-class">
-									  Gmail
-									</figcaption>
-								</figure>
-							</center>
-						</div>
-						<div class="col-md-2 twitter">
-							<center>
-								<figure class="figure">
-									<a href="https://twitter.com/thecuriousmukul" target="_blank">
-										<img src="images/twitter-icon.png" alt="twitter-icon" class="img-rounded img-responsive" />
-									</a>
-									<br />
-									<figcaption class="figure-caption tag-class">
-									  Twitter
-									</figcaption>
-								</figure>
-							</center>
-						</div>
-						<div class="col-md-2 github">
-							<center>
-								<figure class="figure">
-									<a href="https://github.com/mukultaneja" target="_blank">
-										<img src="images/github-icon.png" alt="github-icon" class="img-rounded img-responsive" />
-									</a>
-									<br />
-									<figcaption class="figure-caption tag-class">
-									  Github
-									</figcaption>
-								</figure>
-							</center>
-						</div>
+				</div>
+				<div class="row" id="contact-me-text">
+					<div class="col-md-2 col-xs-2 facebook">
+						<center>
+							<figure class="figure">
+								<a href="https://www.facebook.com/Mac.theCreator" target="_blank">
+									<img src="images/facebook-icon.png" alt="facebook-icon" class="img-rounded img-responsive" />
+								</a>
+								<br />
+								<figcaption class="figure-caption tag-class">
+								  Facebook
+								</figcaption>
+							</figure>
+						</center>
+					</div>
+					<div class="col-md-2 col-xs-2 linkedin">
+						<center>
+							<figure class="figure">
+								<a href="https://in.linkedin.com/in/mukul-taneja-855b1733" target="_blank">
+									<img src="images/linkedin-icon.png" alt="linkedin-icon" class="img-rounded img-responsive" />
+								</a>
+								<br />
+								<figcaption class="figure-caption tag-class">
+								  Linkedin
+								</figcaption>
+							</figure>
+						</center>
+					</div>
+					<div class="col-md-2 col-xs-2 gmail">
+						<center>
+							<figure class="figure">
+								<a href="mailto:mukultaneja91@gmail.com">
+									<img src="images/mail-icon.png" alt="gmail-icon" class="img-rounded img-responsive" />
+								</a>
+								<br />
+								<figcaption class="figure-caption tag-class">
+								  Gmail
+								</figcaption>
+							</figure>
+						</center>
+					</div>
+					<div class="col-md-2 col-xs-2 twitter">
+						<center>
+							<figure class="figure">
+								<a href="https://twitter.com/thecuriousmukul" target="_blank">
+									<img src="images/twitter-icon.png" alt="twitter-icon" class="img-rounded img-responsive" />
+								</a>
+								<br />
+								<figcaption class="figure-caption tag-class">
+								  Twitter
+								</figcaption>
+							</figure>
+						</center>
+					</div>
+					<div class="col-md-2 col-xs-2 github">
+						<center>
+							<figure class="figure">
+								<a href="https://github.com/mukultaneja" target="_blank">
+									<img src="images/github-icon.png" alt="github-icon" class="img-rounded img-responsive" />
+								</a>
+								<br />
+								<figcaption class="figure-caption tag-class">
+								  Github
+								</figcaption>
+							</figure>
+						</center>
 					</div>
 				</div>
-
-				<!-- back to top anchor button to drift window to top -->
-				<button type="button" class="back-to-top btn btn-default" aria-label="Top Arrow">
-					<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-				</button>
-				<!-- footer section of web page -->
-				<div class="footer">
-					<footer class="text-center">
-					</footer>
-				</div>
+			</div>
+			<!-- back to top anchor button to drift window to top -->
+			<button type="button" class="back-to-top btn btn-default" aria-label="Top Arrow">
+				<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+			</button>
+			<!-- footer section of web page -->
+			<div class="footer">
+				<footer class="text-center">
+				</footer>
+			</div>
 		</div>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery-circle-progress/dist/circle-progress.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>

@@ -14,44 +14,9 @@
 	.header {
 		background-image: url('../images/header-image-1.jpg');
 		color: white;
-		position:absolute;
-	    left:0;
-	    right:0;
 	}
 
-	.sidebar {
-		position:absolute;
-	    left:2px;
-	    top:100px;	
-	    bottom: 0;
-	    width: 320px;
-	    height: 90%;
-	    background: white;
-	    display: none;
-	}
-
-	.sidebar a {
-		color: black;
-		text-decoration: none;
-		letter-spacing: 2px;
-	}
-
-	.sidebar-menu-btn {
-		position: relative;
-	    left: 5px;
-	    top: 59px;
-	}
-
-	.open-sidebar {
-		height: 200px;
-	    padding: 20px;
-	    font-size: 19px;
-	    color: purple;
-	    letter-spacing: 2px;
-	    font-weight: bold;
-	}
-
-	.header h3 {
+	.header h2 {
 		letter-spacing: 4px;
 	}
 
@@ -64,13 +29,17 @@
 
 	.home {
 		height:800px;
+		padding-top: 50px;
 	}
 
-	.main {
-		padding-top: 120px;
-	    top:92px; 
-	    right:0; 
-	    bottom:0;
+	.links-div {
+		padding-top: 25px;
+	}
+
+	.links-div a{
+		font-size: 19px;
+		letter-spacing: 4px;
+		padding-left: 13px;
 	}
 
 	.tag-class {
@@ -80,7 +49,7 @@
 	    margin-left: 2px;
 	}
 
-	#skills, #about-me, #projects  {
+	#skills, #about-me, #projects {
 		height: 800px;
 	}
 
@@ -88,7 +57,7 @@
 		height: 643px;
 	}
 
-	#skills, #skills-text {
+	#skills, .skills-text {
 		padding-top: 37px;
 	}
 
@@ -107,6 +76,11 @@
 	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
 		background: gainsboro;
 		height: 100px;
+		padding-top: 14px;
+	}
+
+	#contact-me-text div {
+		margin-right: 39px;
 	}
 
 	#contact-me img {
@@ -127,6 +101,6 @@
 	}
 
 	.copyright {
-		margin-top: 120px;
+		margin-top: 10px;
 	}
 }
