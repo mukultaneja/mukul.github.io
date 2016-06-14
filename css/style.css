@@ -61,7 +61,7 @@
 	}
 
 	#contact-me-text div {
-		margin-right: 24px;
+		margin-right: 20px;
 	}
 
 	#contact-me img {
@@ -126,7 +126,8 @@
 	.links-div a{
 		font-size: 19px;
 		letter-spacing: 4px;
-		padding-left: 13px;
+		padding-left: 22px;
+		float: none;
 	}
 
 	.tag-class {
@@ -138,6 +139,10 @@
 
 	#skills, #about-me, #projects {
 		height: 800px;
+	}
+
+	#about-me .row, #skills .row, #projects .row, #contact-me .row { 
+		margin-right: 0px;
 	}
 
 	#contact-me {
@@ -167,7 +172,7 @@
 	}
 
 	#contact-me-text div {
-		margin-right: 39px;
+		margin-right: 35px;
 	}
 
 	#contact-me img {
