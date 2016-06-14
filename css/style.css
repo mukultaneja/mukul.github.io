@@ -4,124 +4,129 @@
     src: url(fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
     font-size: 12px;
 }
+@media only screen and (min-width : 1200px){
+	 body {
+		font-family: raleway;
+		background-image: url('../images/body-background.jpg');
+		overflow: hidden;
+	}
 
-body {
-	font-family: raleway;
-	background-image: url('../images/body-background.jpg');
-	overflow: hidden;
-}
+	.header {
+		background-image: url('../images/header-image-1.jpg');
+		color: white;
+		position:absolute;
+	    left:0;
+	    right:0;
+	}
 
-.header {
-	background-image: url('../images/header-image-1.jpg');
-	color: white;
-	position:absolute;
-    left:0;
-    right:0;
-}
+	.sidebar {
+		position:absolute;
+	    left:2px;
+	    top:100px;	
+	    bottom: 0;
+	    width: 320px;
+	    height: 90%;
+	    background: white;
+	    display: none;
+	}
 
-.sidebar {
-	position:absolute;
-    left:2px;
-    top:100px;	
-    bottom: 0;
-    width: 320px;
-    height: 90%;
-    background: white;
-    display: none;
-}
+	.sidebar a {
+		color: black;
+		text-decoration: none;
+		letter-spacing: 2px;
+	}
 
-.sidebar a {
-	color: black;
-	text-decoration: none;
-	letter-spacing: 2px;
-}
+	.sidebar-menu-btn {
+		position: relative;
+	    left: 5px;
+	    top: 59px;
+	}
 
-.sidebar-menu-btn {
-	position: relative;
-    left: 5px;
-    top: 59px;
-}
+	.open-sidebar {
+		height: 200px;
+	    padding: 20px;
+	    font-size: 19px;
+	    color: purple;
+	    letter-spacing: 2px;
+	    font-weight: bold;
+	}
 
-.open-sidebar {
-	height: 200px;
-    padding: 20px;
-    font-size: 19px;
-    color: purple;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
+	.header h3 {
+		letter-spacing: 4px;
+	}
 
-.header h3 {
-	letter-spacing: 4px;
-}
+	.header a {
+		text-decoration: none;
+		color: white;
+		padding-top: 26px;
+		font-size: 16px;
+	}
 
-.header a {
-	text-decoration: none;
-	color: white;
-	padding-top: 26px;
-	font-size: 16px;
-}
+	.home {
+		height:800px;
+	}
 
-.home {
-	height:800px;
-}
+	.main {
+		padding-top: 120px;
+	    top:92px; 
+	    right:0; 
+	    bottom:0;
+	}
 
-.main {
-	padding-top: 120px;
-    top:92px; 
-    right:0; 
-    bottom:0;
-}
+	.tag-class {
+		font-weight: bold;
+	    letter-spacing: 1px;
+	    font-size: 15px;
+	    margin-left: 2px;
+	}
 
-.tag-class {
-	font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 15px;
-    margin-left: 2px;
-}
+	#skills, #about-me, #projects  {
+		height: 800px;
+	}
 
-#skills, #about-me, #projects  {
-	height: 800px;
-}
+	#contact-me {
+		height: 643px;
+	}
 
-#contact-me {
-	height: 643px;
-}
+	#skills, #skills-text {
+		padding-top: 37px;
+	}
 
-#skills, #skills-text {
-	padding-top: 37px;
-}
+	#about-me, #about-me-text {
+		padding-top: 37px;
+	}
 
-#about-me, #about-me-text {
-	padding-top: 37px;
-}
+	#projects, #project-text {
+		padding-top: 37px;
+	}
 
-#projects, #project-text {
-	padding-top: 37px;
-}
+	#contact-me, #contact-me-text {
+		padding-top: 37px;
+	}
 
-#contact-me, #contact-me-text {
-	padding-top: 37px;
-}
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 100px;
+	}
 
-.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-	background: gainsboro;
-	height: 100px;
-}
+	#contact-me img {
+		height: 50px;
+		width: 50px;
+	}
 
-#contact-me img {
-	height: 50px;
-	width: 50px;
-}
+	.back-to-top {
+		margin: 0;
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		z-index: 100;
+		display: none;
+		text-decoration: none;
+		text-decoration: none;
+		color: black;
+	}
 
-.back-to-top {
-	margin: 0;
-	position: fixed;
-	bottom: 15px;
-	right: 15px;
-	z-index: 100;
-	display: none;
-	text-decoration: none;
-	text-decoration: none;
-	color: black;
+	.copyright {
+		margin-top: 120px;
+	}
 }
