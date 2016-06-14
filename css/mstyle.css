@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: raleway;
+    src: url(fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
+    font-size: 2px;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px){
+	body {
+		font-family: raleway;
+		background-image: url('../images/body-background.jpg');
+		overflow: hidden;
+	}
+	.header {
+		background-image: url('../images/header-image-1.jpg');
+		color: white;
+	}
+
+	.home {
+		height: 800px;
+		padding-top: 50px;
+	}
+
+	.links-div {
+		padding-top: 25px;
+	}
+
+	.links-div a {
+		color : white;
+		font-size: 17px;
+		padding-left: 10px;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 18.5px;
+	}
+
+	#skills, #about-me, #projects {
+		height: 800px;
+	}
+
+	#contact-me {
+		height: 590px;
+	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 100px;
+		padding-top: 14px;
+	}
+
+	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
+		padding-top: 37px;
+	}
+
+	#contact-me-text div {
+		margin-right: 15px;
+	}
+
+	#contact-me img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.back-to-top {
+		margin: 0;
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		z-index: 100;
+		display: none;
+		text-decoration: none;
+		text-decoration: none;
+		color: black;
+	}
+
+	.copyright {
+		margin-top: 10px;
+	}
+
+}

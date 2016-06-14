@@ -13,9 +13,9 @@ $("document").ready(function(){
 
 	$('.skills-link').click(function(e){
 		e.preventDefault();
-	    $('html, body').animate({
-	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 800);
+		$('html, body').animate({
+		    scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 800);
 	    $.each(skills, function(key, value){
 		$('#'+key+'-skill').circleProgress({
 	        value: value,
