@@ -53,6 +53,11 @@ body {
 	margin-top: 10px;
 }
 
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width : 1200px) {
+}
+
+
 /* Large devices (large desktops, 1200px and up) */
 @media only screen and (min-width : 1200px) {
 
@@ -113,43 +118,6 @@ body {
 	#contact-me-text div {
 		margin-right: 35px;
 	}
-}
-
-
-@media only screen and (max-width: 384px) {
-
-	body {
-		font-size: 14px;
-	}
-
-	.links-div a {
-		font-size: 11px !important;
-		padding-left: 3.5px !important;
-	}
-
-	blockquote {
-		padding: 0px;
-		font-size: 14px !important;
-	}
-
-	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-		background: gainsboro;
-		height: 60px;
-		padding-top: 1px;
-	}
-
-	h2 {
-		font-size: 20px;
-	}
-
-	.skills-text canvas {
-		height: 80px;
-		width: 80px;
-	}
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media only screen and (max-width : 1200px) {
 }
 
 
