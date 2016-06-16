@@ -53,39 +53,71 @@ body {
 	margin-top: 10px;
 }
 
-@media only screen and (max-width: 800px) {
-	.links-div {
-		padding-top: 25px;
+@media only screen and (max-width: 320px) {
+
+	body {
+		font-size: 9px;
+	}
+
+	.col-xs-12 {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.col-xs-1 {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
 	}
 
 	.links-div a {
-		color : white;
-		font-size: 22px;
-    	padding-left: 35px;
-    	float: none;
+		font-size: 12px !important;
+		margin-left: 9px;
+	}
+
+	.tag-class {
+		font-weight: bold;
+	    letter-spacing: 1px;
+	    font-size: 12px;
+	    margin-left: 2px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 60px;
+		padding-top: 1px;
+	}
+
+	.home {
+		height: 815px;
 	}
 
 	blockquote {
 		padding: 0px;
-		font-size: 18.5px;
+		font-size: 13.5px !important;
 	}
 
-	#skills, #about-me, #projects {
-		height: 800px;
+	.skills-text {
+		padding-top: 14px !important; 
 	}
 
-	#contact-me {
-		height: 590px;
+	.skills-text canvas {
+		height: 80px;
+		width: 80px;
 	}
 
-	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
-		padding-top: 37px;
+	h4 {
+		font-size: 15px;
 	}
 
 	#contact-me-text div {
-		margin-right: 20px;
+		padding-bottom: 18px;
 	}
 }
+
 
 @media only screen and (max-width : 768px) {
 
@@ -121,6 +153,40 @@ body {
 		margin-right: 20px;
 	}
 
+}
+
+@media only screen and (max-width: 800px) {
+	.links-div {
+		padding-top: 25px;
+	}
+
+	.links-div a {
+		color : white;
+		font-size: 22px;
+    	padding-left: 35px;
+    	float: none;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 18.5px;
+	}
+
+	#skills, #about-me, #projects {
+		height: 800px;
+	}
+
+	#contact-me {
+		height: 590px;
+	}
+
+	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
+		padding-top: 37px;
+	}
+
+	#contact-me-text div {
+		margin-right: 20px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -169,7 +235,7 @@ body {
 	}
 
 	#skills, .skills-text {
-		padding-top: 37px;
+		padding-top: 25px;
 	}
 
 	#about-me, #about-me-text {
