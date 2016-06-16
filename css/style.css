@@ -53,146 +53,6 @@ body {
 	margin-top: 10px;
 }
 
-@media only screen and (max-width: 320px) {
-
-	body {
-		font-size: 9px;
-	}
-
-	.col-xs-12 {
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
-
-	.col-xs-1 {
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
-
-	.links-div a {
-		font-size: 12px !important;
-		margin-left: 9px;
-	}
-
-	.tag-class {
-		font-weight: bold;
-	    letter-spacing: 1px;
-	    font-size: 12px;
-	    margin-left: 2px;
-	}
-
-	h2 {
-		font-size: 20px;
-	}
-
-	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-		background: gainsboro;
-		height: 60px;
-		padding-top: 1px;
-	}
-
-	.home {
-		height: 815px;
-	}
-
-	blockquote {
-		padding: 0px;
-		font-size: 13.5px !important;
-	}
-
-	.skills-text {
-		padding-top: 14px !important; 
-	}
-
-	.skills-text canvas {
-		height: 80px;
-		width: 80px;
-	}
-
-	h4 {
-		font-size: 15px;
-	}
-
-	#contact-me-text div {
-		padding-bottom: 18px;
-	}
-}
-
-
-@media only screen and (max-width : 768px) {
-
-	.links-div {
-		padding-top: 25px;
-	}
-
-	.links-div a {
-		color : white;
-		font-size: 22px;
-    	padding-left: 32px;
-    	float: none;
-	}
-
-	blockquote {
-		padding: 0px;
-		font-size: 18.5px;
-	}
-
-	#skills, #about-me, #projects {
-		height: 800px;
-	}
-
-	#contact-me {
-		height: 590px;
-	}
-
-	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
-		padding-top: 37px;
-	}
-
-	#contact-me-text div {
-		margin-right: 20px;
-	}
-
-}
-
-@media only screen and (max-width: 800px) {
-	.links-div {
-		padding-top: 25px;
-	}
-
-	.links-div a {
-		color : white;
-		font-size: 22px;
-    	padding-left: 35px;
-    	float: none;
-	}
-
-	blockquote {
-		padding: 0px;
-		font-size: 18.5px;
-	}
-
-	#skills, #about-me, #projects {
-		height: 800px;
-	}
-
-	#contact-me {
-		height: 590px;
-	}
-
-	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
-		padding-top: 37px;
-	}
-
-	#contact-me-text div {
-		margin-right: 20px;
-	}
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media only screen and (max-width : 1200px) {
-}
-
 /* Large devices (large desktops, 1200px and up) */
 @media only screen and (min-width : 1200px) {
 
@@ -252,5 +112,181 @@ body {
 
 	#contact-me-text div {
 		margin-right: 35px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width : 1200px) {
+}
+
+
+@media only screen and (max-width: 800px) {
+	.links-div {
+		padding-top: 25px;
+	}
+
+	.links-div a {
+		color : white;
+		font-size: 22px;
+    	padding-left: 35px;
+    	float: none;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 18.5px;
+	}
+
+	#skills, #about-me, #projects {
+		height: 800px;
+	}
+
+	#contact-me {
+		height: 590px;
+	}
+
+	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
+		padding-top: 37px;
+	}
+
+	#contact-me-text div {
+		margin-right: 20px;
+	}
+}
+
+
+@media only screen and (max-width : 768px) {
+
+	.links-div {
+		padding-top: 25px;
+	}
+
+	.links-div a {
+		color : white;
+		font-size: 22px;
+    	padding-left: 32px;
+    	float: none;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 18.5px;
+	}
+
+	#skills, #about-me, #projects {
+		height: 800px;
+	}
+
+	#contact-me {
+		height: 590px;
+	}
+
+	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
+		padding-top: 37px;
+	}
+
+	#contact-me-text div {
+		margin-right: 20px;
+	}
+
+}
+
+@media only screen and (max-width: 384px) {
+
+	body {
+		font-size: 14px;
+	}
+
+	.links-div a {
+		font-size: 12px !important;
+		padding : 0px;
+		padding-left: 11.5px !important;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 14px !important;
+	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 60px;
+		padding-top: 1px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.skills-text canvas {
+		height: 80px;
+		width: 80px;
+	}
+}
+
+
+@media only screen and (max-width: 320px) {
+
+	body {
+		font-size: 9px !important;
+	}
+
+	.col-xs-12 {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.col-xs-1 {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.links-div a {
+		font-size: 12px !important;
+		margin-left: 9px;
+		padding-left: 0px !important;
+	}
+
+	.tag-class {
+		font-weight: bold;
+	    letter-spacing: 1px;
+	    font-size: 12px;
+	    margin-left: 2px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 60px;
+		padding-top: 1px;
+	}
+
+	.home {
+		height: 815px;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 13.5px !important;
+	}
+
+	.skills-text {
+		padding-top: 14px !important; 
+	}
+
+	.skills-text canvas {
+		height: 80px;
+		width: 80px;
+	}
+
+	h4 {
+		font-size: 15px;
+	}
+
+	#contact-me-text div {
+		padding-bottom: 18px;
 	}
 }
