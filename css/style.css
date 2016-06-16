@@ -53,10 +53,11 @@ body {
 	margin-top: 10px;
 }
 
+
 @media only screen and (max-width: 320px) {
 
 	body {
-		font-size: 9px;
+		font-size: 9px !important;
 	}
 
 	.col-xs-12 {
@@ -115,6 +116,39 @@ body {
 
 	#contact-me-text div {
 		padding-bottom: 18px;
+	}
+}
+
+
+@media only screen and (max-width: 384px) {
+
+	body {
+		font-size: 14px;
+	}
+
+	.links-div a {
+		font-size: 11px !important;
+		padding-left: 3.5px !important;
+	}
+
+	blockquote {
+		padding: 0px;
+		font-size: 14px !important;
+	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 60px;
+		padding-top: 1px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.skills-text canvas {
+		height: 80px;
+		width: 80px;
 	}
 }
 
