@@ -1,23 +1,22 @@
 
 @font-face {
     font-family: raleway;
-    src: url(fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
+    src: url(fonts/raleway/Raleway-Regular.ttf) format("truetype");
     font-size: 12px;
 }
 
 body {
-		font-family: raleway;
-		background-image: url('../images/body-background.jpg');
-		overflow: hidden;
+	font-family: raleway;
+	background-image: url('../images/body-background.jpg');
 }
 
 .header {
-		background-image: url('../images/header-image-1.jpg');
-		color: white;
+	background-image: url('../images/header-image-1.jpg');
+	color: white;
 }
 
 .home {
-	height:800px;
+	height: 600px;
 	padding-top: 50px;
 }
 
@@ -139,11 +138,11 @@ body {
 	}
 
 	#skills, #about-me, #projects {
-		height: 800px;
+		height: 550px;
 	}
 
 	#contact-me {
-		height: 590px;
+		height: 330px;
 	}
 
 	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
@@ -175,11 +174,11 @@ body {
 	}
 
 	#skills, #about-me, #projects {
-		height: 800px;
+		height: 550px;
 	}
 
 	#contact-me {
-		height: 590px;
+		height: 330px;
 	}
 
 	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
@@ -201,7 +200,7 @@ body {
 	.links-div a {
 		font-size: 12px !important;
 		padding : 0px;
-		padding-left: 11.5px !important;
+		padding-left: 10.5px !important;
 	}
 
 	blockquote {
@@ -266,7 +265,7 @@ body {
 	}
 
 	.home {
-		height: 815px;
+		height: 600px;
 	}
 
 	blockquote {
