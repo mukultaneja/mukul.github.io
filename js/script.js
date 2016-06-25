@@ -15,6 +15,7 @@ function addCircles(skills, colors){
 }
 
 $("document").ready(function(){
+
 	var skills = { 'python' : 0.6, 'dv': 0.3, 'php' : 0.7, 'linux' : 0.5,
 				 'db' : 0.5, 'sql' : 0.5, 'js' : 0.7, 'css': 0.4,};
 
@@ -29,36 +30,17 @@ $("document").ready(function(){
 
 	addCircles(skills, colors);
 	
-	$('.skills-link').click(function(e){
-		e.preventDefault();
-		$('html, body').animate({
-		    scrollTop: $( $.attr(this, 'href') ).offset().top
-		}, 800);
-		addCircles(skills, colors);
-	    return false;
-	});
+	var links = ['.skills-link', '.about-me-link', '.project-link', '.contact-me-link'];
 
-	$('.about-me-link').click(function(e){
-		e.preventDefault();
-	    $('html, body').animate({
-	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 800);
-	    return false;
-	});
-	$('.project-link').click(function(e){
-		e.preventDefault();
-	    $('html, body').animate({
-	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 800);
-	    return false;
-	});
-
-	$('.contact-me-link').click(function(e){
-		e.preventDefault();
-	    $('html, body').animate({
-	        scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 800);
-	    return false;
+	$.each(links, function(index, value){
+		$(value).click(function(e){
+			e.preventDefault();
+			$('html, body').animate({
+			    scrollTop: $( $.attr(this, 'href') ).offset().top + 50
+			}, 800);
+			addCircles(skills, colors);
+		    return false;
+		});
 	});
 
 	$(window).scroll(function() {
@@ -78,4 +60,5 @@ $("document").ready(function(){
 	$('.sidebar-menu-btn').click(function(){
 		$('.sidebar').toggle('slide');
 	});
+
 });

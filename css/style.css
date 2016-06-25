@@ -40,7 +40,7 @@ body {
 	margin: 0;
 	position: fixed;
 	bottom: 15px;
-	right: 15px;
+	right: 5px;
 	z-index: 100;
 	display: none;
 	text-decoration: none;
@@ -51,6 +51,7 @@ body {
 .copyright {
 	margin-top: 10px;
 }
+
 
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (max-width : 1200px) {
@@ -78,7 +79,7 @@ body {
 
 	.links-div a{
 		font-size: 19px;
-		letter-spacing: 4px;
+		letter-spacing: 2px;
 		padding-left: 22px;
 		float: none;
 	}
@@ -138,7 +139,7 @@ body {
 	}
 
 	#skills, #about-me, #projects {
-		height: 550px;
+		height: 800px;
 	}
 
 	#contact-me {
@@ -151,6 +152,10 @@ body {
 
 	#contact-me-text div {
 		margin-right: 20px;
+	}
+
+	#viewport {
+		padding-left: 12px;
 	}
 }
 
@@ -174,7 +179,7 @@ body {
 	}
 
 	#skills, #about-me, #projects {
-		height: 550px;
+		height: 800px;
 	}
 
 	#contact-me {
@@ -187,6 +192,10 @@ body {
 
 	#contact-me-text div {
 		margin-right: 20px;
+	}
+
+	#viewport {
+		padding-left: 12px;
 	}
 
 }
@@ -221,6 +230,10 @@ body {
 	.skills-text canvas {
 		height: 80px;
 		width: 80px;
+	}
+
+	#viewport {
+		padding-left: 12px;
 	}
 }
 
@@ -288,5 +301,9 @@ body {
 
 	#contact-me-text div {
 		padding-bottom: 18px;
+	}
+
+	#viewport {
+		padding-left: 12px;
 	}
 }
