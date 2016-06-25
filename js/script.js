@@ -36,7 +36,7 @@ $("document").ready(function(){
 		$(value).click(function(e){
 			e.preventDefault();
 			$('html, body').animate({
-			    scrollTop: $( $.attr(this, 'href') ).offset().top + 50
+			    scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 800);
 			addCircles(skills, colors);
 		    return false;
