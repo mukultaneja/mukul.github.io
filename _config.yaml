@@ -1,0 +1,18 @@
+
+gems:
+  - jekyll-seo-tag
+
+title: Mukul Taneja Official Web Page
+
+description:  This site is related to Mukul Taneja and his introduction of himself.
+              This site describes what Mukul Taneja does, about Mukul Taneja,
+              about Mukul Taneja's technical skills, about Mukul Taneja's technical
+              projects and his contact details.
+
+url:  mukultaneja.github.io
+
+author:
+  - twitter: https://twitter.com/thecuriousmukul
+  - facebook: https://www.facebook.com/Mac.theCreator
+  - linkedin: https://in.linkedin.com/in/mukul-taneja-855b1733
+  - gmail: mukultaneja91@gmail.com
