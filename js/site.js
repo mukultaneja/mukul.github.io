@@ -35,7 +35,7 @@
           gfx.line(p1, p2, {stroke:"#b2b19d", width:2, alpha:edge.target.data.alpha})
         })
         sys.eachNode(function(node, pt){
-          var w = 0.05 * window.innerWidth + gfx.textWidth(node.data.label)
+          var w = 0.02 * window.innerWidth + gfx.textWidth(node.data.label)
           console.log(w);
           if (node.data.alpha===0) return
           if (node.data.shape=='dot'){
