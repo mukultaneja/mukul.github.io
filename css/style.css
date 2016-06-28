@@ -138,6 +138,10 @@ body {
 		font-size: 18.5px;
 	}
 
+	.home {
+		height: 700px;
+	}
+
 	#skills, #about-me, #projects {
 		height: 800px;
 	}
@@ -171,6 +175,10 @@ body {
 		font-size: 22px;
     	padding-left: 32px;
     	float: none;
+	}
+
+	.home {
+		height: 700px;
 	}
 
 	blockquote {
@@ -278,7 +286,7 @@ body {
 	}
 
 	.home {
-		height: 600px;
+		height: 800px;
 	}
 
 	blockquote {
