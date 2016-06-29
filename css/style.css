@@ -103,11 +103,11 @@
 	}
 
 	#skills, #about-me, #projects {
-		height: 800px;
+		height: 700px;
 	}
 
 	#contact-me {
-		height: 800px;
+		height: 388px;
 	}
 
 	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
