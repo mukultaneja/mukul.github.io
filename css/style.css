@@ -1,57 +1,4 @@
 
-@font-face {
-    font-family: raleway;
-    src: url(fonts/raleway/Raleway-Regular.ttf) format("truetype");
-    font-size: 12px;
-}
-
-body {
-	font-family: raleway;
-	background-image: url('../images/body-background.jpg');
-}
-
-.header {
-	background-image: url('../images/header-image-1.jpg');
-	color: white;
-}
-
-.home {
-	height: 600px;
-	padding-top: 50px;
-}
-
-#about-me .row, #skills .row, #projects .row, #contact-me .row { 
-	margin-right: 0px;
-	margin-left: 0px;
-}
-
-.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-	background: gainsboro;
-	height: 100px;
-	padding-top: 14px;
-}
-
-#contact-me img {
-	height: 50px;
-	width: 50px;
-}
-
-.back-to-top {
-	margin: 0;
-	position: fixed;
-	bottom: 15px;
-	right: 5px;
-	z-index: 100;
-	display: none;
-	text-decoration: none;
-	text-decoration: none;
-	color: black;
-}
-
-.copyright {
-	margin-top: 10px;
-}
-
 
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (max-width : 1200px) {
@@ -118,10 +65,23 @@ body {
 	#contact-me-text div {
 		margin-right: 35px;
 	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 100px;
+		padding-top: 14px;
+	}
+
+	.home {
+		height: 600px;
+		d
+		padding-top: 50px;
+	}
 }
 
 
 @media only screen and (max-width: 800px) {
+	
 	.links-div {
 		padding-top: 25px;
 	}
@@ -147,7 +107,7 @@ body {
 	}
 
 	#contact-me {
-		height: 330px;
+		height: 800px;
 	}
 
 	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
@@ -160,52 +120,21 @@ body {
 
 	#viewport {
 		padding-left: 12px;
+	}
+
+	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+		background: gainsboro;
+		height: 100px;
+		padding-top: 14px;
 	}
 }
 
 
 @media only screen and (max-width : 768px) {
 
-	.links-div {
-		padding-top: 25px;
-	}
-
 	.links-div a {
-		color : white;
-		font-size: 22px;
     	padding-left: 32px;
-    	float: none;
 	}
-
-	.home {
-		height: 700px;
-	}
-
-	blockquote {
-		padding: 0px;
-		font-size: 18.5px;
-	}
-
-	#skills, #about-me, #projects {
-		height: 800px;
-	}
-
-	#contact-me {
-		height: 330px;
-	}
-
-	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
-		padding-top: 37px;
-	}
-
-	#contact-me-text div {
-		margin-right: 20px;
-	}
-
-	#viewport {
-		padding-left: 12px;
-	}
-
 }
 
 @media only screen and (max-width: 384px) {
@@ -285,10 +214,6 @@ body {
 		padding-top: 1px;
 	}
 
-	.home {
-		height: 800px;
-	}
-
 	blockquote {
 		padding: 0px;
 		font-size: 13.5px !important;
@@ -311,7 +236,4 @@ body {
 		padding-bottom: 18px;
 	}
 
-	#viewport {
-		padding-left: 12px;
-	}
 }

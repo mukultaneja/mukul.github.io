@@ -10,10 +10,57 @@
               projects and his contact details." />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Mukul Taneja" />
+        <meta http-equiv="cache-control" content="private" />
+        <meta http-equiv="expires" content="3600" />
 		<link rel="shortcut icon" href="images/favicon.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="css/style.min.css" />
+		<style>
+			@font-face {
+			    font-family: raleway;
+			    src: url(css/fonts/raleway/Raleway-Regular.ttf) format("truetype");
+			    font-size: 12px;
+			}
+
+			body {
+				font-family: raleway;
+				background-image: url('images/body-background.jpg');
+			}
+
+			.header {
+				background-image: url('images/header-image-1.jpg');
+				color: white;
+			}
+
+
+			#about-me .row, #skills .row, #projects .row, #contact-me .row { 
+				margin-right: 0px;
+				margin-left: 0px;
+			}
+
+			#contact-me img {
+				height: 50px;
+				width: 50px;
+			}
+
+			.back-to-top {
+				margin: 0;
+				position: fixed;
+				bottom: 15px;
+				right: 5px;
+				z-index: 100;
+				display: none;
+				text-decoration: none;
+				text-decoration: none;
+				color: black;
+			}
+
+			.copyright {
+				margin-top: 10px;
+			}
+
+		</style>
 	</head>
 	<body>
 		<!-- page header-->
@@ -258,9 +305,9 @@
 		<script type="text/javascript" src="bower_components/jquery-circle-progress/dist/circle-progress.js"></script>
 		<script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
 		<script type="text/javascript" src="js/script.min.js"></script>
-		<script type="text/javascript" src="js/arbor.js"></script>
-		<script type="text/javascript" src="js/arbor-tween.js"></script>
-		<script type="text/javascript" src="js/graphics.js"></script>
+		<script type="text/javascript" src="js/arbor.min.js"></script>
+		<script type="text/javascript" src="js/arbor-tween.min.js"></script>
+		<script type="text/javascript" src="js/graphics.min.js"></script>
 		<script type="text/javascript" src="js/site.min.js"></script>
 	</body>
 </html>		
