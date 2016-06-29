@@ -99,6 +99,7 @@
 
 	.home {
 		height: 700px;
+		padding-top: 50px;
 	}
 
 	#skills, #about-me, #projects {
