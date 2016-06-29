@@ -46,8 +46,12 @@
 		height: 643px;
 	}
 
-	#skills, .skills-text {
-		padding-top: 25px;
+	#skills {
+		padding-top: 37px;
+	}
+
+	.skills-text {
+		padding-top: 30px;
 	}
 
 	#about-me, #about-me-text {
@@ -103,7 +107,7 @@
 	}
 
 	#skills, #about-me, #projects {
-		height: 700px;
+		height: 800px;
 	}
 
 	#contact-me {

@@ -23,7 +23,7 @@
       },
       resize:function(){
         canvas.width = .83 * window.innerWidth;
-        canvas.height = .83* window.innerHeight;
+        canvas.height = .73* window.innerHeight;
         sys.screen({size:{width:canvas.width, height:canvas.height}})
         _vignette = null
         that.redraw()
@@ -36,7 +36,6 @@
         })
         sys.eachNode(function(node, pt){
           var w = 0.02 * window.innerWidth + gfx.textWidth(node.data.label)
-          console.log(w);
           if (node.data.alpha===0) return
           if (node.data.shape=='dot'){
             gfx.oval(pt.x-w/2, pt.y-w/2, w, w, {fill:node.data.color, alpha:node.data.alpha})            
