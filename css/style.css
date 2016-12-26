@@ -1,243 +1,271 @@
-
-
 /* Medium devices (desktops, 992px and up) */
-@media only screen and (max-width : 1200px) {
+
+/*@media only screen and (max-width : 1200px) {
+  
 }
 
 
-/* Large devices (large desktops, 1200px and up) */
+ Large devices (large desktops, 1200px and up) 
 @media only screen and (min-width : 1200px) {
+*/
+@font-face { font-family: raleway; src: url(fonts/Roboto/Roboto-Regular.ttf) format("truetype"); font-size: 12px; }
+body { font-family: raleway; background-image: url('../images/body-background.jpg'); position: relative; overflow-x: hidden; }
+.header { /* background-image: url('../images/header-image-1.jpg'); */
+background-color: mediumslateblue; }
+.contact-me img { height: 50px; width: 50px; }
+.back-to-top { margin: 0; position: fixed; bottom: 15px; right: 5px; z-index: 100; display: none; text-decoration: none; text-decoration: none; color: black; }
+.copyright { margin-top: 10px; }
+.header h2 { position: relative; top: 53px; color: white; letter-spacing: 4px; }
+.header a { text-decoration: none; color: white; padding-top: 26px; font-size: 16px; }
+.links-div { padding-top: 25px; text-align: right; }
+.links-div a { font-size: 19px; letter-spacing: 2px; padding-left: 22px; float: none; }
+.tag-class { font-weight: bold; letter-spacing: 1px; font-size: 15px; position: relative; top: 110px; color: black; right: 0px; }
+.social-class { font-weight: bold; letter-spacing: 1px; font-size: 15px; position: relative; top: 15px; color: black; }
+.skills-text { padding-top: 50px; }
+.contact-me-text { padding-top: 37px; }
+.contact-me { min-height: 620px; }
+.skill-heading, .contact-me-heading, .project-heading, .about-me-heading { background: gainsboro; height: 100px; }
+.home { padding: 120px 0 30px 0; }
+.about-me { padding: 3px 0 30px 0; }
+.skills { padding-top: 23px; padding-bottom: 30px; }
+.about-me-heading h2 { position: relative; top: 31px; }
+.skill-heading h2 { position: relative; top: 13px; }
+.contact-me-heading h2 { position: relative; top: 10px; }
+img.me { border-radius: 95px; position: relative; right: 8px; top: 104px; }
+.about-me-text { margin-top: 16px; }
+div.footer { padding-top: 20px; }
+body, html { height: 100%; }
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: transparent; }
 
-	.header h2 {
-		letter-spacing: 4px;
-	}
+/*-------------------------------*/
 
-	.header a {
-		text-decoration: none;
-		color: white;
-		padding-top: 26px;
-		font-size: 16px;
-	}
+/*           Wrappers            */
 
-	.links-div {
-		padding-top: 25px;
-		text-align: right;
-	}
+/*-------------------------------*/
 
-	.links-div a{
-		font-size: 19px;
-		letter-spacing: 2px;
-		padding-left: 22px;
-		float: none;
-	}
+#wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+#wrapper.toggled { padding-left: 220px; }
+#sidebar-wrapper { z-index: 1000; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; overflow-x: hidden; background: #1a1a1a; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+#sidebar-wrapper::-webkit-scrollbar { display: none; }
+#wrapper.toggled #sidebar-wrapper { width: 220px; }
+#page-content-wrapper { width: 100%; padding-top: 24px; }
+#wrapper.toggled #page-content-wrapper { position: absolute; margin-right: -220px; }
 
-	.tag-class {
-		font-weight: bold;
-	    letter-spacing: 1px;
-	    font-size: 15px;
-	    margin-left: 2px;
-	}
+/*-------------------------------*/
 
-	#skills, #about-me, #projects {
-		height: 900px;
-	}
+/*     Sidebar nav styles        */
 
-	#contact-me {
-		height: 643px;
-	}
+/*-------------------------------*/
 
-	#skills {
-		padding-top: 37px;
-	}
+.sidebar-nav { position: absolute; top: 0; width: 220px; margin: 0; padding: 0; list-style: none; }
+.sidebar-nav li { position: relative; line-height: 20px; display: inline-block; width: 100%; padding-bottom: 20px; }
+.sidebar-nav li:before { content: ''; position: absolute; top: 0; left: 0; z-index: -1; height: 100%; width: 3px; background-color: #1c1c1c; -webkit-transition: width .2s ease-in; -moz-transition: width .2s ease-in; -ms-transition: width .2s ease-in; transition: width .2s ease-in; }
+.sidebar-nav li:first-child a { color: #fff; background-color: #1a1a1a; }
+.sidebar-nav li:nth-child(2):before { background-color: #ec1b5a; }
+.sidebar-nav li:nth-child(3):before { background-color: #79aefe; }
+.sidebar-nav li:nth-child(4):before { background-color: #314190; }
+.sidebar-nav li:nth-child(5):before { background-color: #279636; }
+.sidebar-nav li:nth-child(6):before { background-color: #7d5d81; }
+.sidebar-nav li:nth-child(7):before { background-color: #ead24c; }
+.sidebar-nav li:nth-child(8):before { background-color: #2d2366; }
+.sidebar-nav li:nth-child(9):before { background-color: #35acdf; }
+.sidebar-nav li:hover:before, .sidebar-nav li.open:hover:before { width: 100%; -webkit-transition: width .2s ease-in; -moz-transition: width .2s ease-in; -ms-transition: width .2s ease-in; transition: width .2s ease-in; }
+.sidebar-nav li a { display: block; color: #ddd; text-decoration: none; padding: 31px 15px 10px 30px; }
+li.sidebar-brand a { padding-top: 11px; }
+.sidebar-nav li span { vertical-align: middle; }
+.sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus { color: #fff; text-decoration: none; background-color: transparent; }
+.sidebar-nav > .sidebar-brand { height: 65px; font-size: 20px; line-height: 44px; }
+.sidebar-nav .dropdown-menu { position: relative; width: 100%; padding: 0; margin: 0; border-radius: 0; border: none; background-color: #222; box-shadow: none; }
 
-	.skills-text {
-		padding-top: 30px;
-	}
+/*-------------------------------*/
 
-	#about-me, #about-me-text {
-		padding-top: 37px;
-	}
+/*       Hamburger-Cross         */
 
-	#projects, #project-text {
-		padding-top: 37px;
-	}
+/*-------------------------------*/
 
-	#contact-me, #contact-me-text {
-		padding-top: 37px;
-	}
+.hamburger { position: fixed; top: 20px; z-index: 999; display: block; width: 32px; height: 32px; margin-left: 15px; background: transparent; border: none; }
+.hamburger:hover, .hamburger:focus, .hamburger:active { outline: none; }
+.hamburger.is-closed:before { content: ''; display: block; width: 100px; font-size: 14px; color: #fff; line-height: 32px; text-align: center; opacity: 0; -webkit-transform: translate3d(0, 0, 0); -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-closed:hover:before { opacity: 1; display: block; -webkit-transform: translate3d(-100px, 0, 0); -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom { position: absolute; left: 0; height: 4px; width: 100%; }
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom { background-color: #1a1a1a; }
+.hamburger.is-closed .hamb-top { top: 5px; -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-closed .hamb-middle { top: 50%; margin-top: -2px; }
+.hamburger.is-closed .hamb-bottom { bottom: 5px; -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-closed:hover .hamb-top { top: 0; -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-closed:hover .hamb-bottom { bottom: 0; -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom { background-color: #1a1a1a; }
+.hamburger.is-open .hamb-top, .hamburger.is-open .hamb-bottom { top: 50%; margin-top: -2px; }
+.hamburger.is-open .hamb-top { -webkit-transform: rotate(45deg); -webkit-transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08); }
+.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-bottom { -webkit-transform: rotate(-45deg); -webkit-transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08); }
+.hamburger.is-open:before { content: ''; display: block; width: 100px; font-size: 14px; color: #fff; line-height: 32px; text-align: center; opacity: 0; -webkit-transform: translate3d(0, 0, 0); -webkit-transition: all .35s ease-in-out; }
+.hamburger.is-open:hover:before { opacity: 1; display: block; -webkit-transform: translate3d(-100px, 0, 0); -webkit-transition: all .35s ease-in-out; }
 
-	#contact-me-text div {
-		margin-right: 35px;
-	}
+/*-------------------------------*/
 
-	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-		background: gainsboro;
-		height: 100px;
-		padding-top: 14px;
-	}
+/*            Overlay            */
 
-	.home {
-		height: 600px;
-		padding-top: 50px;
-	}
-}
+/*-------------------------------*/
 
+.overlay { position: fixed; display: none; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(250, 250, 250, .8); z-index: 1; }
+.tooltip{ height: 80px; width: 200px; box-shadow: 2px 2px 6px 2px rgba(0,0,0,.15)}
+/*@media only screen and (max-width: 800px) {
+  
+  .links-div {
+    padding-top: 25px;
+  }
 
-@media only screen and (max-width: 800px) {
-	
-	.links-div {
-		padding-top: 25px;
-	}
+  .links-div a {
+    color : white;
+    font-size: 22px;
+      padding-left: 35px;
+      float: none;
+  }
 
-	.links-div a {
-		color : white;
-		font-size: 22px;
-    	padding-left: 35px;
-    	float: none;
-	}
+  blockquote {
+    padding: 0px;
+    font-size: 18.5px;
+  }
 
-	blockquote {
-		padding: 0px;
-		font-size: 18.5px;
-	}
+  .home {
+    height: 700px;
+    padding-top: 50px;
+  }
 
-	.home {
-		height: 700px;
-		padding-top: 50px;
-	}
+  #skills, #about-me, #projects {
+    height: 800px;
+  }
 
-	#skills, #about-me, #projects {
-		height: 800px;
-	}
+  #contact-me {
+    height: 580px;
+  }
 
-	#contact-me {
-		height: 580px;
-	}
+  #about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
+    padding-top: 37px;
+  }
 
-	#about-me, #about-me-text, #skills, .skills-text, #projects, #project-text, #contact-me, #contact-me-text {
-		padding-top: 37px;
-	}
+  #contact-me-text div {
+    margin-right: 20px;
+  }
 
-	#contact-me-text div {
-		margin-right: 20px;
-	}
+  #viewport {
+    padding-left: 12px;
+  }
 
-	#viewport {
-		padding-left: 12px;
-	}
-
-	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-		background: gainsboro;
-		height: 100px;
-		padding-top: 14px;
-	}
+  .skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+    background: gainsboro;
+    height: 100px;
+    padding-top: 14px;
+  }
 }
 
 
 @media only screen and (max-width : 768px) {
 
-	.links-div a {
-    	padding-left: 32px;
-	}
+  .links-div a {
+      padding-left: 32px;
+  }
 }
 
 @media only screen and (max-width: 384px) {
 
-	body {
-		font-size: 14px;
-	}
+  body {
+    font-size: 14px;
+  }
 
-	.links-div a {
-		font-size: 12px !important;
-		padding : 0px;
-		padding-left: 10.5px !important;
-	}
+  .links-div a {
+    font-size: 12px !important;
+    padding : 0px;
+    padding-left: 10.5px !important;
+  }
 
-	blockquote {
-		padding: 0px;
-		font-size: 14px !important;
-	}
+  blockquote {
+    padding: 0px;
+    font-size: 14px !important;
+  }
 
-	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-		background: gainsboro;
-		height: 60px;
-		padding-top: 1px;
-	}
+  .skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+    background: gainsboro;
+    height: 60px;
+    padding-top: 1px;
+  }
 
-	h2 {
-		font-size: 20px;
-	}
+  h2 {
+    font-size: 20px;
+  }
 
-	.skills-text canvas {
-		height: 80px;
-		width: 80px;
-	}
+  .skills-text canvas {
+    height: 80px;
+    width: 80px;
+  }
 
-	#viewport {
-		padding-left: 12px;
-	}
+  #viewport {
+    padding-left: 12px;
+  }
 }
 
 
 @media only screen and (max-width: 320px) {
 
-	body {
-		font-size: 9px !important;
-	}
+  body {
+    font-size: 9px !important;
+  }
 
-	.col-xs-12 {
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
+  .col-xs-12 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 
-	.col-xs-1 {
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-	}
+  .col-xs-1 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 
-	.links-div a {
-		font-size: 12px !important;
-		margin-left: 9px;
-		padding-left: 0px !important;
-	}
+  .links-div a {
+    font-size: 12px !important;
+    margin-left: 9px;
+    padding-left: 0px !important;
+  }
 
-	.tag-class {
-		font-weight: bold;
-	    letter-spacing: 1px;
-	    font-size: 12px;
-	    margin-left: 2px;
-	}
+  .tag-class {
+    font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-left: 2px;
+  }
 
-	h2 {
-		font-size: 20px;
-	}
+  h2 {
+    font-size: 20px;
+  }
 
-	.skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
-		background: gainsboro;
-		height: 60px;
-		padding-top: 1px;
-	}
+  .skill-heading, .contact-me-heading, .project-heading, .about-me-heading {
+    background: gainsboro;
+    height: 60px;
+    padding-top: 1px;
+  }
 
-	blockquote {
-		padding: 0px;
-		font-size: 13.5px !important;
-	}
+  blockquote {
+    padding: 0px;
+    font-size: 13.5px !important;
+  }
 
-	.skills-text {
-		padding-top: 14px !important; 
-	}
+  .skills-text {
+    padding-top: 14px !important; 
+  }
 
-	.skills-text canvas {
-		height: 80px;
-		width: 80px;
-	}
+  .skills-text canvas {
+    height: 80px;
+    width: 80px;
+  }
 
-	h4 {
-		font-size: 15px;
-	}
+  h4 {
+    font-size: 15px;
+  }
 
-	#contact-me-text div {
-		padding-bottom: 18px;
-	}
+  #contact-me-text div {
+    padding-bottom: 18px;
+  }
 
 }
+*/

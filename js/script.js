@@ -1,47 +1,16 @@
 
-function addCircles(skills, colors){
-	$.each(skills, function(key, value){
-		$('#'+key+'-skill').circleProgress({
-	        value: value,
-	        size: 120,
-	        fill: {
-	            gradient: [
-	            		colors[Math.floor(Math.random() *colors.length)],
-	            		colors[Math.floor(Math.random() *colors.length)]
-	            ]
-	        }
-		});
-	});
-}
-
 $("document").ready(function(){
 
-	var skills = { 'python' : 0.6, 'dv': 0.3, 'php' : 0.7, 'linux' : 0.5,
-				 'db' : 0.5, 'sql' : 0.5, 'js' : 0.7, 'css': 0.4,};
+	var offset = 600,
+		duration = 300,
+		to_year = new Date().getFullYear(),
+		links = ['.main-page', '.skills-link', '.about-me-link', '.project-link', '.contact-me-link'],
+		trigger = $('.hamburger'),
+      	overlay = $('.overlay'),
+      	wrapper = $('#page-content-wrapper'),
+     	isClosed = false;
 
-	var colors = ['red', 'orange', 'green', 'blue', 'yellow', 'purple']
-
-	var offset = 600;
-	var duration = 300;
-	var to_year = new Date().getFullYear();
-
-	$('.sidebar').toggle('slide');
 	$('div.copyright center, div.footer footer').html('&copy; Mukul Taneja - ' + to_year);
-
-	addCircles(skills, colors);
-	
-	var links = ['.skills-link', '.about-me-link', '.project-link', '.contact-me-link'];
-
-	$.each(links, function(index, value){
-		$(value).click(function(e){
-			e.preventDefault();
-			$('html, body').animate({
-			    scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-			addCircles(skills, colors);
-		    return false;
-		});
-	});
 
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
@@ -57,8 +26,47 @@ $("document").ready(function(){
 		return false;
 	});
 
-	$('.sidebar-menu-btn').click(function(){
-		$('.sidebar').toggle('slide');
+	$.each(links, function(index, value){
+		$(value).click(function(e){
+			e.preventDefault();
+			$('[data-toggle="offcanvas"]').trigger('click');
+			overlay.hide();
+        	trigger.removeClass('is-open');
+        	trigger.addClass('is-closed');
+        	wrapper.css({'width': '100%'});
+			$('html, body').animate({
+			    scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 1000);
+		    return false;
+		});
 	});
 
+    trigger.click(function () {
+      hamburger_cross();
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        wrapper.css({'width': '100%'});
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        wrapper.css({'width': '0'});
+        isClosed = true;
+      }
+  }
+  
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });
+
+  skillsArcs();
+  lifeCycle();
+  //contactMe();
 });
