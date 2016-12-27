@@ -15,37 +15,37 @@ function lifeCycle() {
 		'year': 1991,
 		'event': 'birth',
 		'result': 'Life Cycle Begin',
-		'formattedText' : 'Came into this world :)'
+		'formattedText': 'Came into this world :)'
 	}, {
 		'year': 2006,
 		'event': 'Class 10th',
 		'result': 'Got cleared with 79.67%',
-		'formattedText' : 'Class 10th'
+		'formattedText': 'Class 10th'
 	}, {
 		'year': 2008,
 		'event': 'Class 12th',
 		'result': 'Got cleared with 72.67%',
-		'formattedText' : 'Class 12th'
+		'formattedText': 'Class 12th'
 	}, {
 		'year': 2009,
 		'event': 'Under Graduation Degree : B.Tech',
 		'result': 'Started differnt phase of life',
-		'formattedText' : 'Started B.Tech'
+		'formattedText': 'Started B.Tech'
 	}, {
 		'year': 2011,
 		'event': 'Industry Certification : Red Hat Certified Engineer',
 		'result': 'Passed RHCE Certification \n from RHEL on Linux',
-		'formattedText' : 'RHCE Certification'
+		'formattedText': 'RHCE Certification'
 	}, {
 		'year': 2011,
 		'event': 'Industry Certification : Red Hat Certified System Administrator',
 		'result': 'Passed RHCSA Certification \n from RHEL on Linux',
-		'formattedText' : 'RHCSA Certification'
+		'formattedText': 'RHCSA Certification'
 	}, {
 		'year': 2013,
 		'event': 'Under Graduation Degree : B.Tech Completed',
 		'result': 'Got cleared with 69.53%',
-		'formattedText' : 'Completed B.Tech'
+		'formattedText': 'Completed B.Tech'
 	}, {
 		'year': 2013,
 		'event': 'Company Name: Ollosoft',
@@ -54,7 +54,7 @@ function lifeCycle() {
 				   \n Period : Sep-2013\
 				   \n Place: Jaipur\
 				   \n Proficiency: PHP/ HTML/ CSS/ Jquery/ Databases',
-		'formattedText' : '@Ollosoft'
+		'formattedText': '@Ollosoft'
 	}, {
 		'year': 2014,
 		'event': 'Company Name: In Time Tec',
@@ -63,7 +63,7 @@ function lifeCycle() {
 				  \n Period: Apr-2014\
 				  \n Place: Jaipur\
 				  \n Proficiency: PHP/ HTML/ CSS/ Jquery/ Databases',
-		'formattedText' : '@In Time Tec'
+		'formattedText': '@In Time Tec'
 	}, {
 		'year': 2015,
 		'event': 'Company Name: Gramener',
@@ -72,7 +72,7 @@ function lifeCycle() {
 				  \n Period : Dec-2015\
 				  \n Place: Bangalore\
 				  \n Proficiency: Python/ D3.js/ Data Analysis',
-		'formattedText' : '@Gramener'
+		'formattedText': '@Gramener'
 	}];
 
 	var svg = d3.select('div.about-me-content')
@@ -178,10 +178,10 @@ function lifeCycle() {
 		.attr('x', function(d, i) {
 			return i * 120 - 10;
 		})
-		.each('end', function(){
+		.each('end', function() {
 			d3.select(this).transition()
-						.duration(2500)
-						.attr('y', -300);
+				.duration(2500)
+				.attr('y', -300);
 		});
 }
 
@@ -241,21 +241,18 @@ function skillsArcs() {
 
 	innerGs.each(function(d, i) {
 		var g = d3.select(this);
-
 		g.append('text')
 			.attr('x', -50)
 			.attr('y', -80)
 			.text(function(d) {
 				return d.skill
 			})
-
 		g.append('text')
 			.attr('x', -15)
 			.attr('y', 0)
 			.text(function(d) {
 				return d.proficiency + ' / ' + 10
 			})
-
 		var background = g.append('path')
 			.datum({
 				endAngle: tau
@@ -263,7 +260,6 @@ function skillsArcs() {
 			.style("fill", "#ddd")
 			.classed('background', true)
 			.attr("d", arc);
-
 		var foreground = g.append("path")
 			.datum({
 				endAngle: (d.proficiency / 10) * tau

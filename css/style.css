@@ -23,7 +23,7 @@ background-color: mediumslateblue; }
 .social-class { font-weight: bold; letter-spacing: 1px; font-size: 15px; position: relative; top: 15px; color: black; }
 .skills-text { padding-top: 50px; }
 .contact-me-text { padding-top: 37px; }
-.contact-me { min-height: 620px; }
+.contact-me { min-height: 350px; }
 .skill-heading, .contact-me-heading, .project-heading, .about-me-heading { background: gainsboro; height: 100px; }
 .home { padding: 120px 0 30px 0; }
 .about-me { padding: 3px 0 30px 0; }
@@ -109,7 +109,8 @@ li.sidebar-brand a { padding-top: 11px; }
 /*-------------------------------*/
 
 .overlay { position: fixed; display: none; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(250, 250, 250, .8); z-index: 1; }
-.tooltip{ height: 80px; width: 200px; box-shadow: 2px 2px 6px 2px rgba(0,0,0,.15)}
+.tooltip { height: 80px; width: 200px; box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, .15) }
+
 /*@media only screen and (max-width: 800px) {
   
   .links-div {
