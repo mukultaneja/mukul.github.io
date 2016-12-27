@@ -11,7 +11,7 @@
 @font-face { font-family: raleway; src: url(fonts/Roboto/Roboto-Regular.ttf) format("truetype"); font-size: 12px; }
 body { font-family: raleway; background-image: url('../images/body-background.jpg'); position: relative; overflow-x: hidden; }
 .header { /* background-image: url('../images/header-image-1.jpg'); */
-background-color: mediumslateblue; }
+background-color: rebeccapurple; }
 .contact-me img { height: 50px; width: 50px; }
 .back-to-top { margin: 0; position: fixed; bottom: 15px; right: 5px; z-index: 100; display: none; text-decoration: none; text-decoration: none; color: black; }
 .copyright { margin-top: 10px; }
