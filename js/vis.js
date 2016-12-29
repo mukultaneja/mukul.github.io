@@ -77,11 +77,13 @@ function lifeCycle() {
 
 	var svg = d3.select('div.about-me-content')
 		.select('svg')
-		.attr("viewBox", "0 0 1160 280")
+		.attr("viewBox", "0 0 1160 250")
 		.attr("preserveAspectRatio", "xMinYMin meet");;
 
+	svg.selectAll('*').remove();
+
 	var g = svg.append('g')
-		.attr('transform', 'translate(10, 200)');
+		.attr('transform', 'translate(10, 180)');
 
 	var circle = g.selectAll('circle')
 		.data(data)
@@ -217,6 +219,7 @@ function skillsArcs() {
 		.attr("viewBox", "10 0 1140 580")
 		.attr("preserveAspectRatio", "xMinYMin meet");
 
+	svg.selectAll('*').remove();
 	var g = svg.append('g')
 	var tau = 2 * Math.PI;
 

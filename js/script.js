@@ -15,11 +15,6 @@ $("document").ready(function() {
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
 			$('.back-to-top').fadeIn(duration);
-			if (windowScrollCount == 0) {
-				lifeCycle();
-				skillsArcs();
-			}
-			windowScrollCount += 1;
 		} else {
 			$('.back-to-top').fadeOut(duration);
 		}
@@ -48,11 +43,11 @@ $("document").ready(function() {
 			}, 800);
 
 			if (value == '.about-me-link')
-				if (windowScrollCount == 0)
+				if (windowScrollCount > 1)
 					lifeCycle();
 
 			if (value == '.skills-link')
-				if (windowScrollCount == 0)
+				if (windowScrollCount > 1)
 					skillsArcs();
 
 			return false;
@@ -88,4 +83,6 @@ $("document").ready(function() {
 		$('#wrapper').toggleClass('toggled');
 	});
 
+	lifeCycle();
+	skillsArcs();
 });
