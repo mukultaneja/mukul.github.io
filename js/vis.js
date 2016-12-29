@@ -166,7 +166,7 @@ function lifeCycle() {
 			return 28;
 		})
 		.attr('x', function(d, i) {
-			return i * 118 + 15;
+			return i * 118 + 23;
 		});
 
 	descriptionText.transition()
