@@ -76,7 +76,7 @@ function lifeCycle() {
 	}];
 
 	var svg = d3.select('div.about-me-content')
-		.append('svg')
+		.select('svg')
 		.attr("viewBox", "0 0 1160 280")
 		.attr("preserveAspectRatio", "xMinYMin meet");;
 
@@ -211,8 +211,9 @@ function skillsArcs() {
 		'skill': 'Ease for Linux OS',
 		'proficiency': 7
 	}]
+
 	var svg = d3.select('div.skills')
-		.append('svg')
+		.select('svg')
 		.attr("viewBox", "10 0 1140 580")
 		.attr("preserveAspectRatio", "xMinYMin meet");
 

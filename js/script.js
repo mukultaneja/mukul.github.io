@@ -15,11 +15,11 @@ $("document").ready(function() {
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
 			$('.back-to-top').fadeIn(duration);
-			// if (windowScrollCount == 0) {
-			// 	lifeCycle();
-			// 	skillsArcs();
-			// }
-			// windowScrollCount += 1;
+			if (windowScrollCount == 0) {
+				lifeCycle();
+				skillsArcs();
+			}
+			windowScrollCount += 1;
 		} else {
 			$('.back-to-top').fadeOut(duration);
 		}
