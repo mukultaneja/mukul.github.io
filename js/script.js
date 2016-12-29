@@ -83,6 +83,12 @@ $("document").ready(function() {
 		$('#wrapper').toggleClass('toggled');
 	});
 
+
+	$('div.social-media-buttons').animate({
+		'opacity': 1
+	}, 3000, 'linear')
+
+	// function call for visuals
 	lifeCycle();
 	skillsArcs();
 });
