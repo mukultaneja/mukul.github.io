@@ -43,11 +43,9 @@ $("document").ready(function() {
 			}, 800);
 
 			if (value == '.about-me-link')
-				if (windowScrollCount > 1)
 					lifeCycle();
 
 			if (value == '.skills-link')
-				if (windowScrollCount > 1)
 					skillsArcs();
 
 			return false;
