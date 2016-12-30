@@ -3,7 +3,7 @@ $("document").ready(function() {
 	var offset = 600,
 		duration = 300,
 		to_year = new Date().getFullYear(),
-		links = ['.main-page', '.skills-link', '.about-me-link', '.project-link', '.contact-me-link'],
+		links = ['.main-page', '.skills-link', '.about-me-link', '.resume', '.project-link', '.contact-me-link'],
 		trigger = $('.hamburger'),
 		overlay = $('.overlay'),
 		wrapper = $('#page-content-wrapper'),
@@ -30,7 +30,7 @@ $("document").ready(function() {
 
 	$.each(links, function(index, value) {
 		$(value).click(function(e) {
-			e.preventDefault();
+			//e.preventDefault();
 			$('[data-toggle="offcanvas"]').trigger('click');
 			overlay.hide();
 			trigger.removeClass('is-open');
