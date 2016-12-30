@@ -13,39 +13,39 @@ function lifeCycle() {
 
 	var data = [{
 		'year': 1991,
-		'event': 'birth',
-		'result': 'Life Cycle Begin',
-		'formattedText': 'Came into this world :)'
+		'event': 'Yay! I came into existence...;)',
+		'result': '',
+		'formattedText': 'Yay! I came into existence...;)'
 	}, {
 		'year': 2006,
-		'event': 'Class 10th',
+		'event': 'Glided through class X',
 		'result': 'Got cleared with 79.67%',
-		'formattedText': 'Class 10th'
+		'formattedText': 'Glided through class X'
 	}, {
 		'year': 2008,
-		'event': 'Class 12th',
+		'event': 'Cleared class XII.. And school was over!!',
 		'result': 'Got cleared with 72.67%',
-		'formattedText': 'Class 12th'
+		'formattedText': 'Cleared class XII.. And school was over!!'
 	}, {
 		'year': 2009,
-		'event': 'Under Graduation Degree : B.Tech',
+		'event': 'Decided to become a Techie!. Joined Engineering...',
 		'result': 'Started differnt phase of life',
-		'formattedText': 'Started B.Tech'
+		'formattedText': 'Decided to become a Techie!. \nJoined Engineering...'
 	}, {
 		'year': 2011,
-		'event': 'Industry Certification : Red Hat Certified Engineer',
-		'result': 'Passed RHCE Certification \n from RHEL on Linux',
-		'formattedText': 'RHCE Certification'
+		'event': 'Declared as a RHCE Certified Enginner.',
+		'result': 'Passed RHCE Certification \n from Red Hat on Linux',
+		'formattedText': 'Declared as a RHCE Certified Enginner'
 	}, {
 		'year': 2011,
-		'event': 'Industry Certification : Red Hat Certified System Administrator',
-		'result': 'Passed RHCSA Certification \n from RHEL on Linux',
-		'formattedText': 'RHCSA Certification'
+		'event': 'Declared as a RHCSA Certified Enginner.',
+		'result': 'Passed RHCSA Certification \n from Red Hat on Linux',
+		'formattedText': 'Declared as a RHCSA Certified Enginner.'
 	}, {
 		'year': 2013,
-		'event': 'Under Graduation Degree : B.Tech Completed',
+		'event': 'Phew! I became an Engineer..:)',
 		'result': 'Got cleared with 69.53%',
-		'formattedText': 'Completed B.Tech'
+		'formattedText': 'Phew! I became an Engineer..:)'
 	}, {
 		'year': 2013,
 		'event': 'Company Name: Ollosoft',
@@ -99,11 +99,13 @@ function lifeCycle() {
 		})
 		.on('mouseover', function(event) {
 			d3.select(this)
-				.append('title')
+				.select('title')
 				.text(function(d) {
 					return d.event + ' \n ' + d.result;
 				})
 		});
+
+	circle.append('title');
 
 	var eventText = g.selectAll('text.event')
 		.data(data)
