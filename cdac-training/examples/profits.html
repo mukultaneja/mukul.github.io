@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Profits</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script type="text/javascript">
+    var data = [{
+        'Month': 'Jun',
+        'Profit': '300'
+    }, {
+        'Month': 'Jul',
+        'Profit': '300'
+    }, {
+        'Month': 'Aug',
+        'Profit': '1600'
+    }, {
+        'Month': 'Sep',
+        'Profit': '500'
+    }, {
+        'Month': 'Oct',
+        'Profit': '1200'
+    }, {
+        'Month': 'Nov',
+        'Profit': '1400'
+    }, ];
+
+    var w = 560,
+        h = 350;
+
+    var parse = d3.time.format('%b').parse;
+
+    months = data.map(function(d) {
+        return parse(d.Month)
+    })
+
+    var xScale = d3.scale.ordinal()
+        .domain(months)
+        .rangeRoundBands([0, w]);
+
+    var yScale = d3.scale.linear()
+        .domain([0, d3.max(data, function(d) {
+            return parseInt(d.Profit);
+        })])
+        .rangeRound([h - 100, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(xScale)
+        .tickFormat(d3.time.format("%b"))
+        .orient('bottom');
+
+    var yAxis = d3.svg.axis()
+        .scale(yScale)
+        .orient('left')
+        .ticks(5);
+
+    var svg = d3.select('body')
+        .append('svg')
+        .attr('width', w)
+        .attr('height', h);
+
+    var g = svg.append('g')
+        .attr('transform', 'translate(60, 50)')
+
+    var rects = g.selectAll('rect')
+        .data(data)
+        .enter()
+        .append('rect')
+        .transition()
+        .delay(function(d, i) {
+            return i * 100
+        })
+        .duration(3000)
+        .ease('bounce')
+        .attr('width', 30)
+        .attr('height', function(d) {
+            return h - yScale(d.Profit) - 80
+        })
+        .attr('x', function(d) {
+            return xScale(parse(d.Month))
+        })
+        .attr('y', function(d) {
+            return yScale(d.Profit)
+        })
+        .style({
+            'fill': 'teal'
+        });
+
+
+    var text = g.selectAll('text')
+        .data(data)
+        .enter()
+        .append('text')
+        .attr('x', function(d) {
+            return xScale(parse(d.Month)) - 2
+        })
+        .attr('y', function(d) {
+            return yScale(d.Profit) - 5
+        })
+        .text(function(d) {
+            return d.Profit
+        })
+
+    svg.append('g')
+        .attr('transform', 'translate(30, 320)')
+        .attr('class', 'x axis')
+        .call(xAxis);
+
+    svg.append('g')
+        .attr('transform', 'translate(50, 69)')
+        .attr('class', 'y axis')
+        .call(yAxis);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>D3 version of SVG Boy</title>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	</head>
+<body>
+	  <div class="boy"></div>
+	  <script type="text/javascript">
+  	    var svg = d3.select('div.boy')
+  	                .append('svg')
+  	                .attr('height', 800)
+  	                .attr('width', 1000);
+  
+  	    var g = svg.append('g')
+  	               .attr('transform', 'translate(100, 0)');
+  
+  	    g.append('g')
+  	       .append('circle')
+  	       .attr('cx', '150')
+  	       .attr('cy', '100')
+  	       .attr('r', '50')
+  	       .style({'fill': 'red'});
+  
+  	    g.append('rect')
+  	       .attr('x', '92')
+  	       .attr('y', '150')
+  	       .attr('height', '100')
+  	       .attr('width', '120')
+  	       .style({ 'fill' : 'blue'});
+  
+  	   g.append('rect')
+  	      .attr('x', '110')
+  	      .attr('y', '250')
+  	      .attr('height', '100')
+  	      .attr('width', '30');
+  
+  	   g.append('rect')
+  	      .attr('x', '165')
+  	      .attr('y', '250')
+  	      .attr('height', '100')
+  	      .attr('width', '30');
+  
+  	   g.append('g')
+  	      .attr('transform', 'rotate(-45, 50, 200)')
+  	      .append('rect')
+  	      .attr('x', '20')
+  	      .attr('y', '200')
+  	      .attr('height', '30')
+  	      .attr('width', '100')
+  	      .style({'fill' : 'blue'});
+  
+  	    g.append('g')
+  	      .attr('transform', 'rotate(45, 272, 160)')
+  	      .append('rect')
+  	      .attr('x', '222')
+  	      .attr('y', '200')
+  	      .attr('height', '30')
+  	      .attr('width', '100')
+  	      .style({'fill' : 'blue'});
+	   </script>
+	</body>
+</html>

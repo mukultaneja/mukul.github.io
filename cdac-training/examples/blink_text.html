@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width">
+		  <title>Change Text Color Example</title>
+		  <style type="text/css">
+		    .welcome-message {
+		      position: relative;
+		      left: 37%;
+		      top: 100px;
+		    }
+		    .welcome-input {
+		      position: relative;
+		      left: 37%;
+		      top: 30px;
+		    }
+		  </style>
+	</head>
+	<body>
+		  <input type="text" size="50" name="message" class="welcome-input"/>
+		  <div class="welcome-message"></div>
+		  <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+		  <script type="text/javascript">
+		      $('document').ready(function(){
+		      	  var count = 0;
+		      	  $('div.welcome-message').css({
+		               'display': 'block',
+		               'font-size': '30px',
+		          });
+		          setInterval(function(){
+		              var message = $('input.welcome-input').val();
+		              $('div.welcome-message').text(message);
+		              if (count % 2 == 0)
+		              	$('div.welcome-message').show();
+		              else
+		              	$('div.welcome-message').hide();
+		              count++;
+		          }, 1000);
+		      });
+		  </script>
+	</body>
+</html>

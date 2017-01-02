@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Append Characters ( Javascript Events) </title>
+    <style type="text/css">
+      input.text-input {
+        margin: 164px 0 0 414px
+      }
+      p.message {
+        margin: 52px 0 0 414px 
+      }
+    </style>
+  </head>
+<body>
+  <input type="text" size="70" class="text-input"/>
+  <p class="message"></p>
+  <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+  <script type="text/javascript">
+
+     // enter text into p tag on change event
+     /*$('input.text-input').change(function(){
+       var value = $(this).val();
+       $('p').html(value);
+     });*/
+
+     // enter text into p tag on keyup event
+     $('input.text-input').keyup(function(){
+       var value = $(this).val();
+       $('p').html(value);
+     });
+  </script>
+</body>
+</html>

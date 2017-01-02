@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bouncing Balls</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script type="text/javascript">
+    var w = 960,
+        h = 560;
+    var svg = d3.select('body')
+                .append('svg')
+                .attr('height', h)
+                .attr('width', w)
+    var g = svg.append('g')
+                //.attr('transform', 'rotate(-20)')
+
+    var circle = g.append('circle')
+                  .attr('r', 50)
+                  .attr('cx', 620)
+                  .attr('cy', 100)
+                  .attr('fill', 'teal')
+
+    var line = g.append('line')
+                  .attr('x1', 400)
+                  .attr('y1', 400)
+                  .attr('x2', 850)
+                  .attr('y2', 400)
+                  .attr('stroke', 'black')
+    
+    forward(circle);
+    
+    function forward(circle){
+        circle.transition()
+          .delay(1000)
+          .duration(1000)
+          .ease('linear')
+          .attr('cx', 620)
+          .attr('cy', 350)
+          .each('end', function(){
+              backward(circle);
+          })
+    }
+    function backward(circle){
+      circle.transition()
+            //.delay(200)
+            //.duration(700)
+            //.ease('linear')
+            .attr('cx', 620)
+            .attr('cy', 100)
+            .each('end', function(){
+                forward(circle);
+            })
+    }
+  </script>
+</body>
+</html>

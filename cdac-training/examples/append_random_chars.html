@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Append Random Chars</title>
+  <style type="text/css">
+    button {
+      margin-right: 35px
+    }
+    div.page {
+    	margin-left: 34%;
+	    margin-top: 9%;
+	    border: 1px solid black;
+	    width: 337px;
+	    padding: 48px;
+    }
+    div.strings {
+		margin-left: 3%;
+    }
+  </style>
+</head>
+<body>
+	<div class="page">
+	  <div class="controls">
+	    <button type='button' class="change-case">Change to Upper Case</button>
+	    <button type='button' class="change-colors">Change colors</button>
+	  </div>
+	  <div class="strings">
+	    <p>abcdefghijklmnopqrstuvwxyz</p>
+	    <p></p>
+	  </div>
+  	</div>
+  <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+  <script type="text/javascript">
+      function pickRandomString(s){
+        var min = 1
+        var max = s.length;
+        var randomMin = Math.random() * min;
+        var randomMax = Math.random() * max;
+        return [parseInt(randomMin), parseInt(randomMax)];
+      }
+      $('document').ready(function(){
+         setInterval(function(){
+         	var s = $('div.strings p:eq(0)').html();
+            var limits = pickRandomString(s);
+            var subString = s.substring(limits[0], limits[1]);
+            $('div.strings p:eq(1)').html(subString);
+         }, 1000)
+         $('button.change-case').click(function(){
+           	var s = $('div.strings p:eq(0)').html();
+           	var buttonText = $(this).text();
+           	if (buttonText.indexOf('Upper') >= 0){
+           		$(this).text('Change to Lower Case');
+           		$('div.strings p:eq(0)').html(s.toUpperCase());
+           	}else{
+           		$(this).text('Change to Upper Case');
+           		$('div.strings p:eq(0)').html(s.toLowerCase());
+           	}
+         });
+         $('button.change-colors').click(function(){
+           
+         });
+     });
+  </script>
+</body>
+</html>

@@ -1,0 +1,850 @@
+<html>
+    <head>
+        <title> D3 Lecture </title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/league.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style type="text/css">
+            .img-rounded {
+                height: 30px;
+                width: 30px;
+            }
+            a.contact-me {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!-- slide 1 -->
+                <section>
+                    Hi All !!
+                    <img src="images/me.png" />
+                    <div class="text-align: center">
+                        <a href="https://www.facebook.com/Mac.theCreator" target="_blank" class="contact-me">
+                            <img src="images/facebook-icon.png" alt="facebook-icon" class="img-rounded img-responsive" />
+                        </a>
+                        <a href="mailto:mukultaneja91@gmail.com" target="_blank" class="contact-me">
+                            <img src="images/mail-icon.png" alt="facebook-icon" class="img-rounded img-responsive" />
+                        </a>
+                        <a href="https://github.com/mukultaneja" target="_blank" class="contact-me">
+                            <img src="images/github-icon.png" alt="facebook-icon" class="img-rounded img-responsive" />
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <section>
+                        <h2> Things to be covered in two days... </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> D3.js & It's basics </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> DATA, and the need to visualize it </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> Supported data formats </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> Supported Technologies </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> SVG, its PROS and CONS</h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> D3js Access Method </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> D3 Scales </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> D3 Axes </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> D3 transitions </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> What next? </h2>
+                        <hr />
+                    </section>
+                </section>
+
+                <!-- slide 3 -->
+                <section>
+                    <section>
+                        <h2> D3.js </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <ul>
+                            <li>It is a Javascript Visualization Framework</li>
+                            <li>It Deals with Data Driven Documents</li>
+                            <li>Today, we Will be dealing with version 3.5</li>
+                            <li>
+                                D3.js is an open source library and hosted over
+                                <a href="https://github.com/d3" target="_blank">github</a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <!-- slide 4 -->
+                <section>
+                    <h2 style="position: relative; top: 65px">Visualization Process</h2>
+                    <hr style="position: relative; top: 65px"/>
+                    <svg width="950" height="700">
+                        <g transform="translate(150, 0)">
+                             <text x=-100 y=208 fill="white" style="font-size: 24px; font-weight: bold">Backend</text>
+                             <line x1=-5 y1=200 x2=50 y2=200 stroke="black" />
+
+                             <rect x=50 y=100 width="150" height="200" style="fill: teal" />
+                             <text x=75 y=200 fill="white" style="font-size: 24px; font-weight: bold">API Data</text>
+                             <line x1=200 y1=200 x2=300 y2=200 stroke="black" />
+
+                             <rect x=300 y=100 width="60" height="200" style="fill: teal" />
+                             <text x=313 y=205 fill="white" style="font-size: 24px; font-weight: bold">D3</text>
+                             <line x1=360 y1=200 x2=460 y2=200 stroke="black" />
+
+                             <rect x=460 y=100 width="150" height="200" style="fill: teal" />
+                             <text x=490 y=205 fill="white" style="font-size: 24px; font-weight: bold">Browser</text>
+
+                             <line x1=610 y1=200 x2=710 y2=200 stroke="black" />
+                             <text x=710 y=208 fill="white" style="font-size: 24px; font-weight: bold">Visuals</text>
+                        </g>
+                    </svg>
+                </section>
+
+                <!-- slide 5 -->
+                <section>
+                    <section>
+                        <h2> What is Data ? </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h4> 
+                            Data is a digital representation of real time information
+                        </h4>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>can be a,</li>
+                            <li>-social media data</li>
+                            <li>-bank account data</li>
+                            <li>-stock market data</li>
+                            <li>Its almost EVERYWHERE! Thus,we cannot ignore data. Couple of reasons being, </li>  
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>
+                            It has a capability to show the past, draw the present and design the future
+                        </h4>
+                    </section>
+                </section>
+
+                <!-- slide 6 -->
+                <section>
+                    <section>
+                        <h2> Why should we VISUALIZE data? </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h4> Raw data does not make much sense to we, humans </h4>
+                        <img src="images/raw_data.png" height="400" width="500"/>
+                        <h4> But </h4>
+                    </section>
+                    <section>
+                        <h4> Visuals do make some sense</h4>
+                        <img src="images/visual.jpg" height="400" width="500"/>
+                    </section>
+                </section>
+
+                <!-- slide 7 -->
+                <section>
+                    <section>
+                        <h2> Supported data formats </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> Array of numbers </h2>
+                        <hr />
+                        [1, 2, 3, 4, 5, 6]
+                    </section>
+                    <section>
+                        <h2> Array of array of numbers </h2>
+                        <hr />
+                        [[1, 2, 3, 4, 5, 6],
+                        <br />
+                        [1, 2, 3, 4, 5, 6],
+                        <br />
+                        [1, 2, 3, 4, 5, 6],
+                        <br />
+                        [1, 2, 3, 4, 5, 6]]
+                    </section>
+                    <section>
+                        <h2> Array of javascript objects </h2>
+                        <hr />
+                        [{'name': 'mukul', 'name': 'vijay', 'name': 'rahul'}]
+                    </section>
+                    <section>
+                        <h2> csv format of data </h2>
+                        <hr />
+                        1,2
+                        <br />
+                        3,4 
+                        <br />
+                        5,6 
+                        <br />
+                    </section>
+                    <section>
+                        <h2> JSON format of data </h2>
+                        <hr />
+                        {'name': 'mukul', 'name': 'vijay', 'name': 'rahul'}
+                    </section>
+                </section>
+
+                <!-- slide 8 -->
+                <section>
+                    <section>
+                        <h2> Technologies which can help </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> HTML </h2>
+                        <hr />
+                        <h4> Hyper Text MarkUp Language </h4>
+                        <h4> Browser Language to read web pages </h4>
+                        <img src="images/html.png" width="100%" height="50%"/>
+                    </section>
+                    <section>
+                        <h2> CSS </h2>
+                        <hr />
+                        <h4> Cascading Style Sheet </h4>
+                        <h4> styling language to style dom elements </h4>
+                        <img src="images/css.png" width="100%" height="50%"/>
+                    </section>
+                    <section>
+                        <h2> JQuery </h2>
+                        <hr />
+                        <h4> A Javascript Framework </h4>
+                        <h4> Makes life easier while dealing with Browser </h4>
+                        <img src="images/js.png" width="100%" height="50%" />
+                    </section>
+                </section>
+
+                <!-- slide 2 -->
+                <section>
+                    <section>
+                        <h2> Before D3, lets have to a look at.. </h2>
+                        <hr />
+                        <ul>
+                            <li>Jquery helps to understand very basic concepts which have been used in D3.</li>
+                            <li>However, there is no relation between Jquery and D3 but D3 also uses DOM SELECTER API which
+                            also used by Jquery and It is easy to understand with the help of Jquery.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Jquery Examples </h2>
+                        <hr />
+                        <h4><a href="https://api.jquery.com/category/selectors/" target="_blank">Jquery Selectors</a></h4>
+                        <h4><a href="http://www.jquery-tutorial.net/introduction/method-chaining/" target="_blank">Jquery Method Chaining</a></h4>
+                        <h4><a href="https://api.jquery.com/category/effects/" target="_blank">Jquery Effects</a></h4>
+                    </section>
+                </section>
+
+                <!-- slide 9 -->
+                <section>
+                    <section>
+                        <h2> Types of visuals </h2>
+                        <hr />
+                    </section>
+                    <section>
+                        <h2> Raster Images (jpeg/ png/ gif) </h2>
+                        <hr />
+                        <h4> Use pixels to create graphics </h4>
+                    </section>
+                    <section>
+                        <h2> SVG </h2>
+                        <hr />
+                        <h4> Use vector theory to create graphics </h4>
+                    </section>
+                </section>
+
+                <!-- slide 10 -->
+                <section>
+                    <section>
+                        <h2> svg </h2>
+                        <hr />
+                        <h4>
+                            Scalable Vector Graphics
+                        </h4>
+                        <img src="images/svg.png" width="100%" />
+                    </section>
+                    <section>
+                        <h4>
+                            svg creates graphics using <u>vector theory</u>.
+                        </h4>
+                    </section>
+                    <section>
+                        <h4> It uses xml format to store/ access images in browser memory. </h4>
+                        <h4> XML is <u>extended mark up langauge</u> and a sister language of html. </h4>
+                        <img src="images/xml.png" />
+                    </section>
+                    <section>
+                        <h4> Pros </h4>
+                        <hr />
+                    </section>
+                    <section>
+                        <h4> 
+                            It gives better performance in terms of zoom level because it does mathematical
+                            computation while reducing/ increasing size of images.
+                        </h4>
+                    </section>
+                    <section>
+                        <h4> XML is portable across different browsers. </h4>
+                    </section>
+                    <section>
+                        <h4> D3.js uses svgs to create graphics on the browser screen. </h4>
+                    </section>
+                    <section>
+                        <h4> Cons </h4>
+                        <hr />
+                    </section>
+                    <section>
+                        <h4> 
+                            Hard to make complex images in svg
+                        </h4>
+                    </section>
+                    <section>
+                        <h4> Image compressions and other optimized technologies are not useful for svgs </h4>
+                    </section>
+                </section>
+
+                <!-- slide 11 -->
+                <section>
+                    <h2> SVG Shapes </h2>
+                    <hr />
+                    <div>
+                        <ul style="margin-right: 214px">
+                            <li> rect </li>
+                            <li> line </li>
+                            <li> circle </li>
+                            <li> ellipse </li>
+                        </ul>
+                        <ul>
+                            <li> polyline </li>
+                            <li> ploygon </li>
+                            <li> path </li>
+                            <li> point </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2> SVG Axes </h2>
+                    <hr />
+                    <img src="images/svg-axis.png" height=200 width=100%/>
+                </section>
+
+                <!-- slide 12 -->
+                <section>
+                    <h2> rect </h2>
+                    <hr />
+                    <img src="images/rect.png" height="20%" width="100%" />
+                    <ul>
+                        <li> x - distance from x axis </li>
+                        <li> y - distance from y axis </li>
+                        <li> width - width of rectangle </li>
+                        <li> stroke - styles for rect's border </li>
+                        <li> style - css style for rectangle </li>
+                    </ul>
+                </section>
+
+                <!-- slide 13 -->
+                <section>
+                    <h2> circle </h2>
+                    <hr />
+                    <img src="images/circle.png" height="20%" width="100%" />
+                    <ul>
+                        <li> cx - distance from x axis to its center </li>
+                        <li> cy - distance from y axis to its center </li>
+                        <li> r - radius of circle </li>
+                        <li> stroke - styles for rect's border </li>
+                        <li> style - css style for rectangle </li>
+                    </ul>
+                </section>
+
+                <!-- slide 14 -->
+                <section>
+                    <h2> ellipse </h2>
+                    <hr />
+                    <img src="images/ellipsis.png" height="20%" width="100%" />
+                    <ul>
+                        <li> cx - distance from x axis to its center </li>
+                        <li> cy - distance from y axis to its center </li>
+                        <li> rx - radius of circle for x axis </li>
+                        <li> rx - radius of circle for y axis </li>
+                        <li> stroke - styles for rect's border </li>
+                        <li> style - css style for rectangle </li>
+                    </ul>
+                </section>
+
+                <!-- slide 15 -->
+                <section>
+                    <h2> line </h2>
+                    <hr />
+                    <img src="images/line.png" height="20%" width="100%" />
+                    <ul>
+                        <li> x1 - point where to start at x axis </li>
+                        <li> y1 - point where to start at y axis </li>
+                        <li> x2 - point where to end at x axis</li>
+                        <li> y2 - point where to end at y axis </li>
+                        <li> stroke - css style for rectangle </li>
+                    </ul>
+                </section>
+
+                <!-- slide 16 -->
+                <section>
+                    <h2> path </h2>
+                    <hr />
+                    <img src="images/path.png" height="20%" width="100%" />
+                    <h4> attribute d="M50, 50 A30, 30 0 0 1 100, 100" </h4>
+                    <ul>
+                        <li> M    to move to 50, 50 units over svg axis </li>
+                        <li> A    to make an arc with radius 30, 30 </li>
+                        <li> 0/1  to rotation about x axis </li>
+                        <li> 0/1  to make large arcs </li>
+                        <li> 0/1  to create mirror arcs</li>
+                        <li> 100  100 end points for arc </li>
+                    </ul>
+                </section>
+
+                <!-- slide 17 -->
+                <section>
+                    <h2> svg - g </h2>
+                    <hr />
+                    <img src="images/group.png" width="100%" height="20%" />
+                    <h4>
+                        It is used to group elements to perform multiple operations
+                        over multiple elements at once.
+                    </h4>
+                </section>
+
+                <!-- slide 18 -->
+                <section>
+                    <h2> SVG Example </h2>
+                    <hr />
+                    <h4> Lets try some basic shapes with some examples</h4>
+                    <ul style="float: left">
+                        <li><a href="examples/svg_boy.html" target="_blank">SVG Boy</a></li>
+                        <li><a href="examples/harry_potter_pandal.html" target="_blank">Harry Potter Pendant</a></li>
+                    </ul>
+                </section>
+
+                <!-- slide 19 -->
+                <section>
+                    <h2> SVG Shapes Resource </h2>
+                    <hr />
+                    <h4> I would like to recommend this
+                        <a href="http://tutorials.jenkov.com/svg/">
+                            SVG Resource
+                        </a>
+                        , any one can refer this to read more about SVG
+                    </h4>
+                </section>
+
+                <!-- slide 20 -->
+                <section>
+                    <h2> D3 Version of SVG Example </h2>
+                    <hr />
+                    <h4> Lets embed basic d3 into previous examples. </h4>
+                    <ul style="float: left">
+                        <li><a href="examples/d3_svg_boy.html" target="_blank">SVG Boy</a></li>
+                        <li>Practise - Harry Potter Pendant</li>
+                    </ul>
+                </section>
+
+                <!-- slide 21 -->
+                <section>
+                    <h2> D3 methods used in examples </h2>
+                    <hr />
+                    <ul style="float: left">
+                        <li>
+                            select - used to select a single selector element
+                        </li>
+                        <li>
+                            selectAll - used to select all the selector elements
+                        </li>
+                        <li>
+                            append - used to append an element under defined selector element
+                        </li>
+                        <li>
+                            attr - sets attributes for selectors
+                        </li>
+                        <li>
+                        <a href="https://github.com/d3/d3/blob/master/API.md"> Many more ...</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2> D3 Selections: How it works </h2>
+                    <hr />
+                    <svg width="100%" height="100%" viewbox="0 0 270 300">
+                        <g class="left" transform="translate(0,50)">
+                            <g class="link" style="fill: white">
+                                <path class="to-array from-selection" d="M51.4677734375,48C75.73388671875,48 75.73388671875,48 100,48"></path>
+                                <path class="to-element from-array" d="M137.576171875,48C168.7880859375,48 168.7880859375,12 200,12"></path>
+                                <path class="to-element from-array" d="M137.576171875,48C168.7880859375,48 168.7880859375,36 200,36"></path>
+                                <path class="to-element from-array" d="M137.576171875,48C168.7880859375,48 168.7880859375,60 200,60"></path>
+                                <path class="to-element from-array" d="M137.576171875,48C168.7880859375,48 168.7880859375,84 200,84"></path>
+                            </g>
+                            <g class="node" style="fill: white">
+                                <g class="selection" transform="translate(0,48)">
+                                    <rect ry="6" rx="6" y="-10" height="20" width="51.4677734375"></rect>
+                                    <text dy=".25em" x="6" style="fill: black; font-size: 10px">selection</text>
+                                </g>
+                                <g class="array" transform="translate(100,48)">
+                                    <rect ry="6" rx="6" y="-10" height="20" width="37.576171875"></rect>
+                                    <text dy=".25em" x="6" style="fill: black; font-size: 10px">group</text>
+                                </g>
+                                <g class="element" transform="translate(200,12)">
+                                    <rect ry="6" rx="6" y="-10" height="20" width="43.6845703125"></rect>
+                                    <text dy=".25em" x="6" style="fill: black; font-size: 10px">section</text>
+                                </g>
+                                <g class="element" transform="translate(200,36)">
+                                    <rect ry="6" rx="6" y="-10" height="20" width="43.6845703125"></rect>
+                                    <text dy=".25em" x="6" style="fill: black; font-size: 10px">section</text>
+                                </g>
+                                <g class="element" transform="translate(200,60)">
+                                    <rect ry="6" rx="6" y="-10" height="20" width="43.6845703125"></rect>
+                                    <text dy=".25em" x="6" style="fill: black; font-size: 10px">section</text>
+                                </g>
+                                <g class="element" transform="translate(200,84)">
+                                    <rect ry="6" rx="6" y="-10" height="20" width="43.6845703125"></rect>
+                                    <text dy=".25em" x="6" style="fill: black; font-size: 10px">section</text>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </section>
+                <section>
+                    <h2> D3 Selections: How it works </h2>
+                    <hr />
+                    <svg width="100%" height="120">
+                      <g>
+                        <rect fill="#eee" stroke="#ccc" stroke-dasharray="2,2" width="45%" height="100"></rect>
+                        <rect fill="#eee" stroke="#ccc" stroke-dasharray="2,2" x="485" width="50%" height="100"></rect>
+                        <rect fill="#a1d99b" fill-opacity=".8" stroke="#71a76c" stroke-dasharray="2,2" y="10" x="403" width="120" height="80"></rect>
+                        <text x="158" text-anchor="middle" y="50" dy=".35em" style="font-size: 18px">selections will go here</text>
+                        <text x="460" text-anchor="middle" y="50" dy=".35em" style="font-size: 18px;">joiny bits will go here</text>
+                        <text x="720" text-anchor="middle" y="50" dy=".35em" style="font-size: 18px">data will go here</text>
+                      </g>
+                    </svg>
+                </section>
+                <!-- slide 22 -->
+                <section>
+                    <h2> Hurray! We wrapped the forst part! </h2>
+                    <hr />
+                    <h4> How are you feeling ? </h4>
+                    <img src="images/happy.jpg" class="feeling first" />
+                    <img src="images/sad.jpg" class="feeling first"/>
+                    <img src="images/confused.jpg" class="feeling first"/>
+                    <img src="images/shouldigo.jpg" class="feeling first"/>
+                    <p class="first-emotions"></p>
+                </section>
+
+                <!-- slide 23 -->
+                <section>
+                    <section>
+                        <h2> Let's start second part !!! </h2>
+                        <hr />
+                        <h4> Let's attach some data to dom elements now </h4>
+                    </section> 
+                    <section>
+                        <h4> Let's take an array and attach its elements with DOM </h4> 
+                        <hr />
+                        <div style="display: inline-block; height:100%; width: 100%">
+                            <img src="images/attach-data.png" style="width: 60%;"/>
+                            <br />
+                            <img src="images/attach-data-output.png" style="width: 34%"/>
+                        </div>
+                    </section>
+                    <section>
+                        <h4> Where is the data ? </h4>
+                        <hr />
+                    </section>
+                    <section> 
+                        <div style="display: inline-block; height:100%; width: 100%">
+                            <img src="images/show-attach-data.png" style="width: 60%;"/>
+                            <br />
+                            <img src="images/show-attach-data-output.png" style="width: 34%" />
+                        </div>
+                    </section>
+                </section>
+
+                <!-- slide 24 -->
+                <section>
+                    <h2> enter / update / exit </h2>
+                    <hr />
+                    <ul>
+                        <li><h5>Access methods to deal with DOM elements</h5></li>
+                        <li><h5>D3 calls them joins as they join data with DOM elements</h5></li>
+                        <li><h5>Very important as they provide generalisation to CURD operations</h5></li>
+                    </ul>
+                </section>
+
+                <!-- slide 25 -->
+                <section>
+                    <section>
+                        <h2> Enter Method </h2>
+                        <hr />
+                        <img src="images/attach-data.png" style="width: 60%;"/>
+                    </section>
+                    <section>
+                        <h2> Enter Method </h2>
+                        <hr />
+                        <svg width="100%" height="100%">
+                            <g transform="translate(30, 40)">
+                                <text x="150" y="0" style="font-size: 24px; fill: white">Data Elements</text>
+                                <circle cx="220" cy="50" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="50" x2="410" y2="50" style="stroke:black" />
+                                <circle cx="220" cy="150" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="150" x2="410" y2="150" style="stroke:black" />
+                                <circle cx="220" cy="250" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="250" x2="410" y2="250" style="stroke:black" />
+                            </g>
+                            <g transform="translate(360, 40)">
+                                <text x="80" y="0" style="font-size: 24px; fill: white">Enter</text>
+                                <rect x="60" y="10" height="270" width="100" style="fill: teal"/>
+                                <line x1="160" y1="50" x2="310" y2="50" style="stroke:black" />
+                                <line x1="160" y1="150" x2="310" y2="150" style="stroke:black" />
+                                <line x1="160" y1="250" x2="310" y2="250" style="stroke:black" />
+                            </g>
+                            <g transform="translate(130, 40)">
+                                <text x="510" y="0" style="font-size: 24px; fill: white">Dom Elements</text>
+                                <circle cx="580" cy="50" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <circle cx="580" cy="150" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <circle cx="580" cy="250" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                            </g>
+                        </svg>  
+                    </section>
+                    <section>
+                        <h2> Update Method </h2>
+                        <hr />
+                        <img src="images/update.png" />
+                    </section>
+                    <section>
+                        <h2> Update Method </h2>
+                        <hr />
+                        <svg width="100%" height="100%">
+                            <g transform="translate(10, 40)">
+                                <text x="150" y="0" style="font-size: 24px; fill: white">Data Elements</text>
+                                <circle cx="220" cy="50" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="50" x2="630" y2="50" style="stroke:black" />
+                                <circle cx="220" cy="150" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="150" x2="630" y2="150" style="stroke:black" />
+                                <circle cx="220" cy="250" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="250" x2="630" y2="250" style="stroke:black" />
+                            </g>
+                            <g transform="translate(100, 40)">
+                                <text x="510" y="0" style="font-size: 24px; fill: white">Dom Elements</text>
+                                <circle cx="580" cy="50" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <circle cx="580" cy="150" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <circle cx="580" cy="250" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                            </g>
+                        </svg> 
+                    </section>
+                    <section>
+                        <h2> Exit Method </h2>
+                        <hr />
+                        <img src="images/exit.png" />
+                    </section>
+                    <section>
+                        <h2> Exit Method </h2>
+                        <hr />
+                        <svg width="100%" height="100%">
+                            <g transform="translate(10, 40)">
+                                <text x="150" y="0" style="font-size: 24px; fill: white">Data Elements</text>
+                                <circle cx="220" cy="50" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <line x1="257" y1="50" x2="630" y2="50" style="stroke:black" />
+                            </g>
+                             <g transform="translate(330, 40)">
+                                <text x="90" y="0" style="font-size: 24px; fill: white">Exit</text>
+                                <rect x="60" y="10" height="270" width="100" style="fill: teal"/>
+                                <line x1="160" y1="50" x2="310" y2="50" style="stroke:black" />
+                            </g>
+                            <g transform="translate(100, 40)">
+                                <text x="510" y="0" style="font-size: 24px; fill: white">Dom Elements</text>
+                                <circle cx="580" cy="50" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <circle cx="580" cy="150" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                                <circle cx="580" cy="250" r="35" style="stroke: white; stroke-width: 3; fill: white"/>
+                            </g>
+                        </svg> 
+                    </section>
+                    <section>
+                        <h2> Lets take a combined look of all 3 access methods </h2>
+                        <hr />
+                        <img src="images/accessmethods.png" />
+                    </section>
+                </section>
+
+                <!-- slide 26 -->
+                <section>
+                    <h2> Can you try this example ?</h2>
+                    <hr />
+                    <h5>
+                        <a href="examples/d3_enter_update_exit.html" target="_blank">Access Methods</a>
+                    </h5>
+                </section>
+
+                <!-- slide 27 -->
+                <section>
+                    <h2>Lets get our hands dirty now</h2>
+                    <hr />
+                    <h5>
+                        <a href="examples/profits.html" target="_blank">Lets create a bar chart</a>
+                    </h5>
+                </section>
+                <section>
+                    <h2>Done for the day..Relax now!!! </h2>
+                    <hr />
+                    <h4> How are you feeling ? </h4>
+                        <img src="images/happy.jpg" class="feeling second" />
+                        <img src="images/sad.jpg" class="feeling second"/>
+                        <img src="images/confused.jpg" class="feeling second"/>
+                        <img src="images/shouldigo.jpg" class="feeling second"/>
+                        <p class="second-emotions"></p>
+                </section>
+                <section>
+                    <h2>Lets do our hands dirty now</h2>
+                    <hr />
+                    <h5>
+                        <a href="examples/d3_horizontal_bars.html" target="_blank">Now Lets try for a horizontal bar chart</a>
+                    </h5>
+                    <h5>
+                        <a href="examples/d3_scatter_plot.html" target="_blank">Now Lets try for a scatter plot</a>
+                    </h5>
+                </section>
+
+                <!-- slide 28 -->
+                <section>
+                    <section>
+                        <h2>D3 Scales</h2>
+                        <hr />
+                        <ul>
+                            <li><h5>Method to compress actual data values</h5></li>
+                            <li><h5>Domain takes data values</h5></li>
+                            <li><h5>Ranges convert domain values into given ranges</h5></li>
+                            <li><h5>Does not create any visual components but helps them to be fit into given space</h5></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mostly used D3 Scales</h2>
+                        <hr />
+                        <ul>
+                            <li><h5>Linear Scales, converts domain values in continous ranges</h5></li>
+                            <li><h5>Ordianl Scales, converts domain values in discreate ranges</h5></li>
+                        </ul>
+                        <h5>
+                            <a href="examples/d3_scales.html" target="_blank">D3 Scales</a>
+                        </h5>
+                    </section>
+                </section>
+
+                <!-- slide 29 -->
+                <section>
+                    <section>
+                        <h2>D3 Axes</h2>
+                        <hr />
+                        <h5> Creates x & y axis for specific graphs </h5>
+                        <h5>
+                            <a href="examples/d3_scales.html" target="_blank">D3 Axes</a>
+                        </h5>
+                    </section>
+                </section>
+
+                <!-- slide 30 -->
+                <section>
+                    <section>
+                        <h2>D3 Transitions</h2>
+                        <hr />
+                        <h5> Add dymanic effects into d3 charts & components </h5>
+                        <h5>
+                            <a href="examples/d3_scatter_plot.html" target="_blank">Scatter Plot</a>
+                        </h5>
+                        <h5>
+                            <a href="examples/bouncing_balls.html" target="_blank">Bouncing Ball</a>
+                        </h5>
+                        <h5>
+                            <a href="examples/d3_bullet.html" target="_blank">Bullet Chart</a>
+                        </h5>
+                    </section>
+                </section>
+
+                <!-- slide 32 -->
+                <section>
+                    <section>
+                        <h2>D3 bar chart with JSON Data</h2>
+                        <hr />
+                        <h5>
+                            <a href="examples/profits.html" target="_blank">Let's create a bar chart</a>
+                        </h5>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                width: "70%",
+                height: "90%",
+                margin: 0,
+                minScale: 1,
+                maxScale: 1,
+                // Display controls in the bottom right corner
+                controls: true,
+
+                // Display a presentation progress bar
+                progress: true,
+
+                // Display the page number of the current slide
+                slideNumber: true,
+
+                // Push each slide change to the browser history
+                history: false,
+
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+            });
+        </script>
+        <script type="text/javascript">
+            $('document').ready(function(){
+                var count = 0;
+                $('img.feeling').hide();
+                var emotions = ['Am I Awesome ?', 'Are you Sad ? ', 'Have any Doubt ?', 'Should I go ?']
+                setInterval(function(){
+                    if (count >= 4)
+                        count = 0;
+                    $('img.first').hide();
+                    $('img.first:eq(' + count + ')').show();
+                    $('p.first-emotions').html(emotions[count]);
+                    $('img.second').hide();
+                    $('img.second:eq(' + count + ')').show();
+                    $('p.second-emotions').html(emotions[count]);
+                    count++;
+                }, 1500)
+            });
+        </script>
+    </body>
+</html>

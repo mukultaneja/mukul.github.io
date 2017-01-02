@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>D3 ENter/ Update/ Exit</title>
+      <style type="text/css">
+        .enter-buttons {
+          margin-left: 50px
+        }
+        .update-buttons {
+          margin-left: 120px
+        }
+        .exit-buttons {
+          margin-left: 120px
+        }
+      </style>
+  </head>
+  <body>
+      <input type="text" name="d3-enter" />
+       &nbsp;&nbsp;
+      <input type="text" name="d3-update" />
+       &nbsp;&nbsp;
+      <input type="text" name="d3-exit" />
+      <br /><br />
+      <button type="button" name="click-enter" class="enter-buttons">Enter</button>
+      <button type="button" name="click-update" class="update-buttons">Update</button>
+      <button type="button" name="click-exit" class="exit-buttons">Exit</button>
+      <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+      <script type="text/javascript">
+        $('document').ready(function(){
+           var data;
+           $('.enter-buttons').click(function(){
+             data = $('input[name="d3-enter"]').val().split(',');
+             d3.select('body')
+               .selectAll('p')
+               .data(data)
+               .enter()
+               .append('p')
+               .text(function(d){ return d; });
+           });
+           $('.update-buttons').click(function(){
+             data = $('input[name="d3-update"]').val().split(',');
+             d3.select('body')
+               .selectAll('p')
+               .data(data)
+               .text(function(d){ return d; });
+           });
+           $('.exit-buttons').click(function(){
+             data = $('input[name="d3-exit"]').val().split(',');
+             d3.select('body')
+               .selectAll('p')
+               .data(data)
+               .exit()
+               .remove()
+               .text(function(d){ return d; });
+           });
+        });
+      </script>
+    
+  </body>
+</html>

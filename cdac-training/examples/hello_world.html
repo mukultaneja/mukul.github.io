@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World Example</title>
+    <style type="text/css">
+      div.welcome-message {
+        color: green;
+        font-size: 24px;
+        margin: 20px 2px 2px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="welcome-message">
+      Hello to D3 Learning Class.
+    </div>
+    <script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+      $('document').ready(function(){
+          var count = 0;
+          setInterval(function(){
+            if (count % 2 == 0){
+              $('div.welcome-message').show();
+            }else{
+              $('div.welcome-message').hide();
+            }
+            count++;
+          }, 500)
+      });
+    </script>
+  </body>
+</html>

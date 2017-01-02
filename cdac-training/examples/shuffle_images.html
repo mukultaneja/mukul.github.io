@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Shuffle Between Images</title>
+		<style type="text/css">
+			div.emotions{
+				margin: auto;
+				border: 1px solid black;
+				min-height: 450px;
+				width: 350px;
+			}
+			div.emotions h4 {
+				text-align: center;
+			}
+			div.emotions img {
+				margin-top: 50px;
+				margin-left: 53px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="emotions">
+			<h4>Human Emotions & Feelings</h4>
+	        <img src="../images/happy.jpg" class="feeling" />
+	        <img src="../images/sad.jpg" class="feeling"/>
+	        <img src="../images/confused.jpg" class="feeling"/>
+	        <img src="../images/shouldigo.jpg" class="feeling"/>
+	    </div>
+		<script src="https://code.jquery.com/jquery-1.7.2.js"></script>
+		<script type="text/javascript">
+			$('document').ready(function(){
+				var count = 0;
+				$('img.feeling').hide();
+				setInterval(function(){
+					if (count >= 4)
+						count = 0;
+					$('img.feeling').hide();
+					$('img.feeling:eq('+count+')').show();
+					count++;
+				}, 1000);
+			});
+		</script>
+	</body>
+</html>
