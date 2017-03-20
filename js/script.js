@@ -1,10 +1,11 @@
 $("document").ready(function() {
 
 	var offset = 600,
-		duration = 300,
+		duration = 1000,
 		to_year = new Date().getFullYear(),
 		links = ['.main-page', '.skills-link', '.about-me-link',
-				'.resume', '.project-link', '.contact-me-link', '.blogs'],
+			'.resume', '.project-link', '.contact-me-link', '.blogs', '.rewards-link'
+		],
 		trigger = $('.hamburger'),
 		overlay = $('.overlay'),
 		wrapper = $('#page-content-wrapper'),
@@ -41,13 +42,13 @@ $("document").ready(function() {
 			});
 			$('html, body').animate({
 				scrollTop: $($.attr(this, 'href')).offset().top
-			}, 800);
+			}, 1500);
 
 			if (value == '.about-me-link')
-					lifeCycle();
+				lifeCycle();
 
 			if (value == '.skills-link')
-					skillsArcs();
+				skillsArcs();
 
 			return false;
 		});
@@ -85,7 +86,7 @@ $("document").ready(function() {
 
 	$('div.social-media-buttons').animate({
 		'opacity': 1
-	}, 3000, 'linear')
+	}, 2000, 'linear')
 
 	// function call for visuals
 	lifeCycle();
