@@ -203,13 +203,13 @@ function skillsArcs() {
 		'skill': 'Web Development',
 		'proficiency': 9
 	}, {
-		'skill': 'Alogrithms Learning',
+		'skill': 'Algorithms Learning',
 		'proficiency': 7
 	}, {
 		'skill': 'Data Structures',
 		'proficiency': 7
 	}, {
-		'skill': 'Sql & DataBases',
+		'skill': 'Sql & Databases',
 		'proficiency': 6
 	}, {
 		'skill': 'Ease for Linux OS',
