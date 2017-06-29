@@ -23,7 +23,7 @@ background-color:dimgray;}
 .social-class{font-weight:bold;letter-spacing:1px;font-size:15px;position:relative;top:15px;color:black;}
 .skills-text{padding-top:37px;}
 .contact-me-text{padding-top:37px;}
-.rewards-div{padding-top:37px;height:500px;}
+.rewards-div{padding-top:0px;height:500px;}
 .contact-me{min-height:450px;}
 .skill-heading,.contact-me-heading,.project-heading,.about-me-heading,.rewards-heading{background:gainsboro;height:100px;}
 .home{padding:120px 0 30px 0;}
