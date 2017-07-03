@@ -198,7 +198,7 @@ function skillsArcs() {
 		'proficiency': 8
 	}, {
 		'skill': 'Data Visualization',
-		'proficiency': 7
+		'proficiency': 8
 	}, {
 		'skill': 'Web Development',
 		'proficiency': 9
@@ -213,7 +213,7 @@ function skillsArcs() {
 		'proficiency': 6
 	}, {
 		'skill': 'Ease for Linux OS',
-		'proficiency': 7
+		'proficiency': 8
 	}]
 
 	var svg = d3.select('div.skills')
