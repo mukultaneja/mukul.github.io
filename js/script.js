@@ -8,7 +8,7 @@ $("document").ready(function() {
 		],
 		trigger = $('.hamburger'),
 		overlay = $('.overlay'),
-		wrapper = $('#page-content-wrapper'),
+		wrapper = $('.page-content-wrapper'),
 		isClosed = false,
 		windowScrollCount = 0;
 
@@ -82,11 +82,6 @@ $("document").ready(function() {
 	$('[data-toggle="offcanvas"]').click(function() {
 		$('#wrapper').toggleClass('toggled');
 	});
-
-
-	$('div.social-media-buttons').animate({
-		'opacity': 1
-	}, 2000, 'linear')
 
 	// function call for visuals
 	lifeCycle();

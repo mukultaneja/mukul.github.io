@@ -266,6 +266,7 @@ function skillsArcs() {
 			.style("fill", "#ddd")
 			.classed('background', true)
 			.attr("d", arc);
+
 		var foreground = g.append("path")
 			.datum({
 				endAngle: (d.proficiency / 10) * tau
@@ -273,6 +274,7 @@ function skillsArcs() {
 			.style("fill", "orange")
 			.classed('foreground', true)
 			.attr("d", arc);
+
 	});
 }
 

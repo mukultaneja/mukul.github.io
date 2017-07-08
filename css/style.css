@@ -10,41 +10,35 @@
 */
 @font-face{font-family:raleway;src:url(fonts/Roboto/Roboto-Regular.ttf) format("truetype");font-size:12px;}
 body{font-family:raleway;background-image:url('../images/body-background.jpg');position:relative;overflow-x:hidden;}
-.header{ /* background-image: url('../images/header-image-1.jpg'); */
-background-color:dimgray;}
 .contact-me img{height:50px;width:50px;}
 .back-to-top{margin:0;position:fixed;bottom:15px;right:5px;z-index:100;display:none;text-decoration:none;text-decoration:none;color:black;}
 .copyright{margin-top:10px;}
-.header h2{position:relative;top:53px;color:white;letter-spacing:4px;}
+.header h2{position:relative;letter-spacing:4px;}
 .header a{text-decoration:none;color:white;padding-top:26px;font-size:16px;}
 .links-div{padding-top:25px;text-align:right;}
 .links-div a{font-size:19px;letter-spacing:2px;padding-left:22px;float:none;}
-.tag-class{font-weight:bold;letter-spacing:1px;font-size:15px;position:relative;top:110px;color:black;right:0px;}
+.tag-class{font-weight:bold;letter-spacing:1px;font-size:15px;position:relative;top:33px;color:black;right:0px;}
 .social-class{font-weight:bold;letter-spacing:1px;font-size:15px;position:relative;top:15px;color:black;}
 .skills-text{padding-top:37px;}
 .contact-me-text{padding-top:37px;}
 .rewards-div{padding-top:0px;height:500px;}
 .contact-me{min-height:450px;}
 .skill-heading,.contact-me-heading,.project-heading,.about-me-heading,.rewards-heading{background:gainsboro;height:100px;}
-.home{padding:120px 0 30px 0;}
+.home{padding:75px 0 30px 0;}
 .about-me{padding:3px 0 30px 0;}
 .skills{padding-top:23px;padding-bottom:20px;}
 .about-me-heading h2{position:relative;top:31px;}
 .skill-heading h2,.rewards-heading h2{position:relative;top:13px;}
 .contact-me-heading h2{position:relative;top:10px;}
-img.me{border-radius:95px;position:relative;right:8px;top:104px;}
+img.me{border-radius:95px;position:relative;right:8px;}
 .about-me-text{margin-top:37px;}
 div.footer{padding-top:20px;}
 body,html{height:100%;}
-div.social-media-buttons{padding:0px;}
 .nav .open > a,.nav .open > a:hover,.nav .open > a:focus{background-color:transparent;}
-.social-media-buttons{opacity:0;}
 .talk-images{height:187px;width:194px;position:relative;left:30px;top:20px;}
 .caption{position:relative;top:26px;text-decoration:none;color:black;left:28px;}
 a:hover{text-decoration:none;}
-.rewards-div div{border:1px solid gainsboro;background:white;height:244px;cursor:pointer;border-radius:5px;box-shadow:9px 9px 9px gainsboro; margin-left: 20px;}
 blockquote { font-size: 16.5px; }
-._51mw { display: none; }
 /*-------------------------------*/
 
 /*           Wrappers            */
@@ -118,7 +112,5 @@ li.sidebar-brand a{padding-top:11px;}
 
 .overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(250,250,250,.8);z-index:1;}
 .tooltip{height:80px;width:200px;box-shadow:2px 2px 6px 2px rgba(0,0,0,.15)}
-.blog-header h2{letter-spacing:2px;font-size:50px;color:white;margin-top:50px;}
-.blog-header{background: url('../images/kernels-header.png');}
-.blog-title div.blogs a{text-decoration:none;position:relative;top:27px}
-.blog-title div.blogs{background-color:white;height:80px;}
+.blog-link a { font-size: 20px; text-decoration: none}
+.blog-link {padding: 16px 0px 0px 40px;}
