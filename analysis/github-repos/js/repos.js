@@ -1,5 +1,5 @@
 $('document').ready(function() {
-	var url = '/repos',
+	var url = window.location.href + 'data.json',
 		w = 1360,
 		h = 560,
 		svg = d3.select('div.repovis')
