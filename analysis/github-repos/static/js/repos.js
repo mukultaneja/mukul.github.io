@@ -1,6 +1,5 @@
 $('document').ready(function() {
-	var url = '/repos',
-		w = 1360,
+	var w = 1360,
 		h = 560,
 		svg = d3.select('div.repovis')
 		.append('svg')
