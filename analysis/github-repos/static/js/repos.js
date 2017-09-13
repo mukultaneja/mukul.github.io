@@ -20,7 +20,7 @@ $('document').ready(function() {
 		.size([w, h])
 		.alpha(0.3);
 
-	d3.json(url, function(error, data) {
+	d3.json('data.json', function(error, data) {
 		data = data.sort(function(a, b) {
 			return d3.descending(a.value, b.value)
 		});
