@@ -194,7 +194,7 @@ function skillsArcs() {
 		h = 580;
 
 	var data = [{
-		'skill': 'Python Language',
+		'skill': 'Python',
 		'proficiency': 8
 	}, {
 		'skill': 'Data Visualization',
@@ -203,7 +203,7 @@ function skillsArcs() {
 		'skill': 'Web Development',
 		'proficiency': 9
 	}, {
-		'skill': 'Algorithms Learning',
+		'skill': 'Algorithms',
 		'proficiency': 7
 	}, {
 		'skill': 'Data Structures',
@@ -212,7 +212,7 @@ function skillsArcs() {
 		'skill': 'Sql & Databases',
 		'proficiency': 6
 	}, {
-		'skill': 'Ease for Linux OS',
+		'skill': 'Linux',
 		'proficiency': 8
 	}]
 
@@ -248,15 +248,17 @@ function skillsArcs() {
 	innerGs.each(function(d, i) {
 		var g = d3.select(this);
 		g.append('text')
-			.attr('x', -50)
+			.attr('x', function(d){
+				return d.skill.length * (-3);
+			})
 			.attr('y', -80)
 			.text(function(d) {
 				return d.skill
 			})
 			.style('font-size', '14px')
 		g.append('text')
-			.attr('x', -15)
-			.attr('y', 0)
+			.attr('x', -20)
+			.attr('y', 3)
 			.text(function(d) {
 				return d.proficiency + ' / ' + 10
 			})
@@ -270,11 +272,25 @@ function skillsArcs() {
 
 		var foreground = g.append("path")
 			.datum({
-				endAngle: (d.proficiency / 10) * tau
+				endAngle: 0 //(d.proficiency / 10) * tau
 			})
 			.style("fill", "orange")
 			.classed('foreground', true)
 			.attr("d", arc);
+
+	  	foreground.transition()
+	      .duration(3000)
+	      .attrTween("d", arcTween((d.proficiency / 10) * tau));
+
+	    function arcTween(newAngle) {
+			return function(d) {
+			    var interpolate = d3.interpolate(d.endAngle, newAngle);
+				return function(t) {
+      				d.endAngle = interpolate(t);
+      				return arc(d);
+    			};
+    		}
+  		};
 
 	});
 }

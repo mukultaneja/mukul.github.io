@@ -83,7 +83,17 @@ $("document").ready(function() {
 		$('#wrapper').toggleClass('toggled');
 	});
 
+	$('.submit').click(function(e){
+		e.preventDefault();
+		var action = 'mailto:mukultaneja91@gmail.com';
+		var to = $('#email').val();
+		var subject = $('#subject').val();
+		var message = $('#message').val();
+		action += '?subject=' + subject + '&body=' + message;
+		$('form[name="contact-me"]').attr('action', action);
+	})
+
 	// function call for visuals
-	lifeCycle();
+	// lifeCycle();
 	skillsArcs();
 });
