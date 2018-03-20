@@ -7,11 +7,11 @@ blockquote { font-size: 16.5px; }
 figure img { display: block; margin: 0 auto;}
 
 /* class based css */
+.header{ height: 950px; }
 .contact-me img{height:50px;width:50px;}
 .back-to-top{margin:0;position:fixed;bottom:15px;right:5px;z-index:100;display:none;text-decoration:none;text-decoration:none;color:black;}
 .copyright{margin-top:10px;}
 .header h2{position:relative;letter-spacing:4px;}
-.header a{text-decoration:none;color:white;padding-top:26px;font-size:16px;}
 .links-div{padding-top:25px;text-align:right;}
 .links-div a{font-size:19px;letter-spacing:2px;padding-left:22px;float:none;}
 .tag-class{font-weight:bold;letter-spacing:1px;font-size:15px;position:relative;top:33px;color:black;right:0px;}
@@ -25,14 +25,14 @@ figure img { display: block; margin: 0 auto;}
 .about-me{padding:3px 0 30px 0;}
 .skills{padding-top:23px;padding-bottom:20px;}
 .about-me-heading h2{position:relative;top:31px;}
-.skill-heading h2,.rewards-heading h2{position:relative;top:13px;}
-.contact-me-heading h2{position:relative;top:10px;}
+.skill-heading h2,.rewards-heading h2{position:relative;top:31px;}
+.contact-me-heading h2{position:relative;top:31px;}
 .me{border-radius:95px;position:relative;right:8px;}
 .figure-caption{text-align: center;}
 .about-me-text{margin-top:37px;}
 .footer{padding-top:20px;}
 .nav .open > a,.nav .open > a:hover,.nav .open > a:focus{background-color:transparent;}
-.talk-images{height:187px;width:194px;}
+.talk-images{height:200px;width:300px;}
 .caption{position:relative;top:26px;text-decoration:none;color:black;left:28px;}
 #wrapper{padding-left:0;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;transition:all 0.5s ease;}
 #wrapper.toggled{padding-left:220px;}
