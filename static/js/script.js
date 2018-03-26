@@ -83,15 +83,39 @@ $("document").ready(function() {
 		$('#wrapper').toggleClass('toggled');
 	});
 
-	$('.submit').click(function(e){
-		e.preventDefault();
-		var action = 'mailto:mukultaneja91@gmail.com';
-		var to = $('#email').val();
-		var subject = $('#subject').val();
-		var message = $('#message').val();
-		action += '?subject=' + subject + '&body=' + message;
-		$('form[name="contact-me"]').attr('action', action);
+	$('#subject').blur(function(){
+		var href = $('.submit').attr('href');
+		href += '?subject=' + $(this).val();
+		$('.submit').attr('href', href)
 	})
+
+	$('#message').blur(function(){
+		var href = $('.submit').attr('href');
+		if (href.indexOf('subject') != -1)
+			href += '&body=' + $(this).val();
+		else
+			href += '?body=' + $(this).val();
+		$('.submit').attr('href', href)
+	})
+
+	setInterval(function(){
+		$('.typewriter').css({
+			'border': 'none'})
+		$('.typewriter-1').removeClass('d-none').addClass('d-block');
+	},5000);
+	setInterval(function(){
+		$('.typewriter-1').css({
+			'border': 'none'})
+		$('.typewriter-2').removeClass('d-none').addClass('d-block');
+	},10000);
+	setInterval(function(){
+		$('.typewriter-2').css({
+			'border': 'none'})
+		$('.typewriter-3').removeClass('d-none').addClass('d-block');
+	},15000);
+	setInterval(function(){
+		$('.icons').removeClass('d-none').addClass('d-block');
+	},19000);
 
 	// function call for visuals
 	// lifeCycle();
