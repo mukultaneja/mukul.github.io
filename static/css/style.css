@@ -34,7 +34,7 @@ figure img{display:block;margin:0 auto;}
 .rewards{padding-top:0px;height:970px;}
 .contact-me{min-height:920px;}
 .skill-heading,.contact-me-heading,.project-heading,.about-me-heading,.rewards-heading{background:gainsboro;height:100px;}
-.about-me{padding:3px 0 30px 0;height:950px;}
+.about-me{height:1100px;}
 .skill-heading h2,.about-me-heading h2,.contact-me-heading h2,.rewards-heading h2{position:relative;top:31px;}
 .nav .open > a,.nav .open > a:hover,.nav .open > a:focus{background-color:transparent;}
 .talk-images{height:200px;width:300px;}
