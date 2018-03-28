@@ -248,8 +248,8 @@ function skillsArcs() {
 	innerGs.each(function(d, i) {
 		var g = d3.select(this);
 		g.append('text')
-			.attr('x', function(d){
-				return d.skill.length * (-3);
+			.attr('x', function(d) {
+				return d.skill.length * (-4.5);
 			})
 			.attr('y', -80)
 			.text(function(d) {
@@ -278,19 +278,19 @@ function skillsArcs() {
 			.classed('foreground', true)
 			.attr("d", arc);
 
-	  	foreground.transition()
-	      .duration(3000)
-	      .attrTween("d", arcTween((d.proficiency / 10) * tau));
+		foreground.transition()
+			.duration(3000)
+			.attrTween("d", arcTween((d.proficiency / 10) * tau));
 
-	    function arcTween(newAngle) {
+		function arcTween(newAngle) {
 			return function(d) {
-			    var interpolate = d3.interpolate(d.endAngle, newAngle);
+				var interpolate = d3.interpolate(d.endAngle, newAngle);
 				return function(t) {
-      				d.endAngle = interpolate(t);
-      				return arc(d);
-    			};
-    		}
-  		};
+					d.endAngle = interpolate(t);
+					return arc(d);
+				};
+			}
+		};
 
 	});
 }
@@ -399,7 +399,7 @@ function contactMe() {
 		.data(data)
 		.attr('x', 0)
 		.attr('y', 0)
-		//.attr('xlink:href', function(d, i){ return storeImages[i]; })
+	//.attr('xlink:href', function(d, i){ return storeImages[i]; })
 
 	var node = svg.selectAll('.node')
 		.data(data)
