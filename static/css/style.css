@@ -89,7 +89,7 @@ figure img { display: block; margin: 0 auto; }
 	.contact-me { height: 820px; }
 }
 @media (min-width:1680px) {
-	.header { height: 970px; }
+	.header { height: 1100px; }
 	.about-me { height: 1100px; }
 	.rewards { height: 970px; }
 	.contact-me { height: 920px; }
