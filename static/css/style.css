@@ -27,7 +27,7 @@ figure img { display: block; margin: 0 auto; }
 	to { border-color: transparent; }
 	100% { border-color: black; }
 }
-.blog-content { height: 830px; }
+.blog-content { height: 830px; font-size: 18px;}
 .navbar a { letter-spacing: 2px; }
 .back-to-top { margin: 0; position: fixed; bottom: 15px; right: 10px; z-index: 100; display: none; text-decoration: none; text-decoration: none; color: black; background-color: white; border-color: black; }
 .back-to-top:hover { background-color: white; border-color: black; }
@@ -50,6 +50,13 @@ figure img { display: block; margin: 0 auto; }
 .talk-images { height: 200px; width: 300px; }
 .blog-link a { font-size: 20px; text-decoration: none }
 .blog-link { padding: 16px 0px 0px 40px; }
+.posts li { list-style: none; }
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
 @media (min-width:768px) {
 	.intro h2,
 	.intro h4 { font-size: 24px; }

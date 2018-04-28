@@ -1,3 +1,8 @@
-*.sublime-project
-*.sublime-workspace
-*.orig
+_site
+.sass-cache
+.jekyll-metadata
+.DS_Store
+*.lock
+analysis/.DS_Store
+*.sublime-*
+

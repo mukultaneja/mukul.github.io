@@ -1,21 +1,53 @@
-plugins:
-  - jekyll-seo-tag
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: Mukul Taneja
-description: It is a web page which comprises information belongs to Mukul Taneja. Mukul Taneja is the only person who owns this page and this page contains information such as his primary interest, his background, his skills and his contact details across internet.
-url: https://mukultaneja.github.io
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Personal Website - Mukul Taneja
+email: mukultaneja91@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal Web Page belongs to Mukul Taneja.
+  Mukul Taneja is the only person who owns this page and
+  this page contains information such as his primary interest,
+  his background, his skills and his contact details across internet.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mukultaneja.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 author: Mukul Taneja
-twitter:
-  username: thecuriousmac
-facebook:
-  admins: Mac.theCreator
-logo: https://mukultaneja.github.io/images/favicon.png
+twitter_username: thecuriousmukul
+github_username:  mukultaneja
 social:
   name: Mukul Taneja
   links:
-    - https://in.linkedin.com/in/mukultaneja
-    - https://www.facebook.com/Mac.theCreator
     - https://twitter.com/thecuriousmukul
     - https://github.com/mukultaneja
-    - http://www.hackerearth.com/@mac.thecreator
-lang: en_US
+    - https://www.linkedin.com/in/mukultaneja
+    - https://www.facebook.com/Mac.theCreator
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

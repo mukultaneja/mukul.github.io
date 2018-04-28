@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="container-fluid">
+	<div class="row mt-2 p-2">
+        <div class="col-3">
+            <nav class="navbar navbar-expand-lg">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item w-25 text-center">
+                            <a href="/blogs">
+                                <span class="font-weight-bold">Blogs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+		<div class="col-9">
+            <h2>{{ page.title }}</h2>
+        </div>
+    </div>
+	<hr />
+	<div class="container">
+		<div class="row p-3">
+			<div class="col">
+				<p class="meta">{{ page.date | date_to_string }}</p>
+			</div>
+		</div>
+		<hr />
+		<div class="row p-3">
+			<div class="col">
+				<div class="post">
+			  		{{ content }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
