@@ -1,105 +1,83 @@
-@font-face { font-family: raleway; src: url(fonts/Roboto/Roboto-Regular.ttf) format("truetype"); font-size: 12px; }
+@font-face{font-family:raleway;src:url(fonts/Roboto/Roboto-Regular.ttf) format("truetype");font-size:12px;}
 
 /* tag based css */
-body { font-family: raleway; background-image: url('../images/body-background.jpg'); position: relative; overflow-x: hidden; }
-body,
-html { height: 100%; }
-a:hover { text-decoration: none; }
-blockquote { font-size: 16.5px; }
-figure img { display: block; margin: 0 auto; }
+body{font-family:raleway;background-image:url('../images/body-background.jpg');position:relative;overflow-x:hidden;}
+body,html{height:100%;}
+a:hover{text-decoration:none;}
+blockquote{font-size:16.5px;}
+figure img{display:block;margin:0 auto;}
 
 /* class based css */
-.typewriter,
-.typewriter-1,
-.typewriter-2,
-.typewriter-3 { color: #000; font-family: fantasy; font-size: 55px; font-weight: bolder; overflow: hidden; border-right: .15em solid orange; /* The typwriter cursor */ white-space: nowrap; /* Keeps the content on a single line */ margin: 0 auto; /* Gives that scrolling effect as the typing happens */ letter-spacing: .15em; /* Adjust as needed */ animation: typing 4s steps(60, end), blink-caret .2s infinite; }
-.typewriter-3 { font-size: 40px; }
+.typewriter,.typewriter-1,.typewriter-2,.typewriter-3{color:#000;font-family:fantasy;font-size:55px;font-weight:bolder;overflow:hidden;border-right:.15em solid orange; /* The typwriter cursor */white-space:nowrap; /* Keeps the content on a single line */margin:0 auto; /* Gives that scrolling effect as the typing happens */letter-spacing:.15em; /* Adjust as needed */animation:typing 4s steps(60,end),blink-caret .2s infinite;}
+.typewriter-3{font-size:40px;}
 
 /* The typing effect */
-@keyframes typing {
-	from { width: 0; }
-	to { width: 100%; }
+@keyframes typing{
+	from{width:0;}
+	to{width:100%;}
 }
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
-	from,
-	to { border-color: transparent; }
-	100% { border-color: black; }
+@keyframes blink-caret{
+	from,to{border-color:transparent;}
+	100%{border-color:black;}
 }
-.blog-content { height: 830px; font-size: 18px;}
-.navbar a { letter-spacing: 2px; }
-.back-to-top { margin: 0; position: fixed; bottom: 15px; right: 10px; z-index: 100; display: none; text-decoration: none; text-decoration: none; color: black; background-color: white; border-color: black; }
-.back-to-top:hover { background-color: white; border-color: black; }
-.copyright { margin-top: 10px; }
-.header h2 { position: relative; letter-spacing: 4px; }
-.skills-text { padding-top: 37px; }
-.contact-me-text { padding-top: 37px; }
-.skill-heading,
-.contact-me-heading,
-.project-heading,
-.about-me-heading,
-.rewards-heading { background: gainsboro; height: 100px; }
-.skill-heading h2,
-.about-me-heading h2,
-.contact-me-heading h2,
-.rewards-heading h2 { position: relative; top: 31px; }
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus { background-color: transparent; }
-.talk-images { height: 200px; width: 300px; }
-.blog-link a { font-size: 20px; text-decoration: none }
-.blog-link { padding: 16px 0px 0px 40px; }
-.posts li { list-style: none; }
-pre code {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
+.blog-content{height:830px;font-size:18px;}
+.navbar a{letter-spacing:2px;}
+.back-to-top{margin:0;position:fixed;bottom:15px;right:10px;z-index:100;display:none;text-decoration:none;text-decoration:none;color:black;background-color:white;border-color:black;}
+.back-to-top:hover{background-color:white;border-color:black;}
+.copyright{margin-top:10px;}
+.header h2{position:relative;letter-spacing:4px;}
+.skills-text{padding-top:37px;}
+.contact-me-text{padding-top:37px;}
+.skill-heading,.contact-me-heading,.project-heading,.about-me-heading,.rewards-heading{background:gainsboro;height:100px;}
+.skill-heading h2,.about-me-heading h2,.contact-me-heading h2,.rewards-heading h2{position:relative;top:31px;}
+.nav .open > a,.nav .open > a:hover,.nav .open > a:focus{background-color:transparent;}
+.talk-images{height:200px;width:300px;}
+.blog-link a{font-size:20px;text-decoration:none}
+.blog-link{padding:16px 0px 0px 40px;}
+.posts li{list-style:none;}
+pre code{background-color:#eee;border:1px solid #999;display:block;padding:20px;}
+@media (min-width:768px){
+	.intro h2,.intro h4{font-size:24px;}
+	.navbar,.navbar-nav{display:inline-block;width:100%}
+	.nav-item{display:inline-block;}
+	.first .navbar-nav li:first-child{width:25%!important;}
+	.second .navbar-nav li:first-child{width:22%!important;}
+	.second .navbar-nav li:nth-child(2){width:22%!important;}
+	.second .navbar-nav li:nth-child(3){width:27%!important;}
+	.collapse{display:block}
+	.about-me{height:950px;}
+	text{font-size:20px!important;}
+	.header a{font-size:12px;}
+	.back-to-top{right:2px;}
 }
-@media (min-width:768px) {
-	.intro h2,
-	.intro h4 { font-size: 24px; }
-	.navbar,
-	.navbar-nav { display: inline-block; width: 100% }
-	.nav-item { display: inline-block; }
-	.first .navbar-nav li:first-child { width: 25% !important; }
-	.second .navbar-nav li:first-child { width: 22% !important; }
-	.second .navbar-nav li:nth-child(2) { width: 22% !important; }
-	.second .navbar-nav li:nth-child(3) { width: 27% !important; }
-	.collapse { display: block }
-	.about-me { height: 950px; }
-	text { font-size: 20px !important; }
-	.header a { font-size: 12px; }
-	.back-to-top { right: 2px; }
+@media (min-width:980px){
+	.intro h2{font-size:35px;}
+	.navbar,.navbar-nav{display:inline-block;width:100%}
+	.nav-item{display:inline-block;}
+	.second .navbar-nav li:first-child{width:22%!important;}
+	.collapse{display:block}
+	.about-me{height:950px;}
+	text{font-size:20px!important;}
+	.header a{font-size:15px;}
+	.back-to-top{right:3px;}
 }
-@media (min-width:980px) {
-	.intro h2 { font-size: 35px; }
-	.navbar,
-	.navbar-nav { display: inline-block; width: 100% }
-	.nav-item { display: inline-block; }
-	.second .navbar-nav li:first-child { width: 22% !important; }
-	.collapse { display: block }
-	.about-me { height: 950px; }
-	text { font-size: 20px !important; }
-	.header a { font-size: 15px; }
-	.back-to-top { right: 3px; }
+@media (min-width:1080px){
+	.intro h2{font-size:40px;}
+	.about-me{height:950px;}
 }
-@media (min-width:1080px) {
-	.intro h2 { font-size: 40px; }
-	.about-me { height: 950px; }
+@media (min-width:1360px){
+	.header{height:880px;}
+	.about-me{height:1000px;}
+	.rewards{height:880px;}
+	.contact-me{height:820px;}
 }
-@media (min-width:1360px) {
-	.header { height: 880px; }
-	.about-me { height: 1000px; }
-	.rewards { height: 880px; }
-	.contact-me { height: 820px; }
-}
-@media (min-width:1680px) {
-	.header { height: 1100px; }
-	.about-me { height: 1100px; }
-	.rewards { height: 970px; }
-	.contact-me { height: 920px; }
-	.intro h2 { font-size: 60px; }
-	.intro h4 { font-size: 35px; }
+@media (min-width:1680px){
+	.header{height:1100px;}
+	.about-me{height:1100px;}
+	.rewards{height:970px;}
+	.contact-me{height:920px;}
+	.intro h2{font-size:60px;}
+	.intro h4{font-size:35px;}
 }

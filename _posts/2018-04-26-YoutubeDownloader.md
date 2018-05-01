@@ -5,6 +5,13 @@ date:   2018-04-26
 description: " - An automated service to download multiple youtube videos at a time."
 lang: "en"
 author: "Mukul Taneja"
+fb: '<div class="fb-like" data-href="https://mukultaneja.github.io/2018/04/26/YoutubeDownloader.html" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>'
+linkedin: '<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+<script type="IN/Share" data-url="https://mukultaneja.github.io/2018/04/26/YoutubeDownloader.html"></script>'
+twitter: '<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=https://mukultaneja.github.io/2018/04/26/YoutubeDownloader.html"
+  data-size="large" target="_blank">
+Tweet</a>'
 ---
 The Internet is a new friend for this generation. There is no doubt it is making people's life easier day by day. It has put the world at a very small compass and allowed people to stay connected with each other irrespective of the places where they are living. It gives leverages to people to learn new things, make communities and share their knowledge/ideas with each other. It also helps businesses to improve/grow and eventually get new opportunities in their respective domains.
 

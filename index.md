@@ -310,7 +310,4 @@ title: Personal Website - Mukul Taneja
             </div>
         </div>
     </div>
-    <a class="btn btn-primary back-to-top">
-        <img src="static/images/uparrow.jpg" />
-    </a>
 </div>

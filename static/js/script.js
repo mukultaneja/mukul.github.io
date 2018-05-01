@@ -83,13 +83,13 @@ $("document").ready(function() {
 		$('#wrapper').toggleClass('toggled');
 	});
 
-	$('#subject').blur(function(){
+	$('#subject').blur(function() {
 		var href = $('.submit').attr('href');
 		href += '?subject=' + $(this).val();
 		$('.submit').attr('href', href)
 	})
 
-	$('#message').blur(function(){
+	$('#message').blur(function() {
 		var href = $('.submit').attr('href');
 		if (href.indexOf('subject') != -1)
 			href += '&body=' + $(this).val();
@@ -98,24 +98,27 @@ $("document").ready(function() {
 		$('.submit').attr('href', href)
 	})
 
-	setInterval(function(){
+	setInterval(function() {
 		$('.typewriter').css({
-			'border': 'none'})
+			'border': 'none'
+		})
 		$('.typewriter-1').removeClass('d-none').addClass('d-block');
-	},5000);
-	setInterval(function(){
+	}, 5000);
+	setInterval(function() {
 		$('.typewriter-1').css({
-			'border': 'none'})
+			'border': 'none'
+		})
 		$('.typewriter-2').removeClass('d-none').addClass('d-block');
-	},10000);
-	setInterval(function(){
+	}, 10000);
+	setInterval(function() {
 		$('.typewriter-2').css({
-			'border': 'none'})
+			'border': 'none'
+		})
 		$('.typewriter-3').removeClass('d-none').addClass('d-block');
-	},15000);
-	setInterval(function(){
+	}, 15000);
+	setInterval(function() {
 		$('.icons').removeClass('d-none').addClass('d-block');
-	},19000);
+	}, 19000);
 
 	// function call for visuals
 	// lifeCycle();

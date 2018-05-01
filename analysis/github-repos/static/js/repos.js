@@ -1,5 +1,5 @@
 $('document').ready(function() {
-	var w = 1360,
+	var w = 1160,
 		h = 560,
 		svg = d3.select('div.repovis')
 		.append('svg')

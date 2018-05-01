@@ -1,7 +1,4 @@
----
-layout: default
-title: Mukul Taneja's Blog
----
+--- layout: default title: Mukul Taneja's Blog ---
 <div class="container-fluid">
     <div class="row mt-2 p-2">
         <div class="col-5">
@@ -17,24 +14,23 @@ title: Mukul Taneja's Blog
                 </div>
             </nav>
         </div>
-		<div class="col-7">
+        <div class="col-7">
             <h2>Mukul Taneja - Blogs</h2>
         </div>
     </div>
 </div>
 <hr />
 <div class="container blog-content">
-	{% for post in site.posts %}
-		<div class="row p-3">
-			<div class="col-2">
-				{{ post.date | date_to_string }}
-			</div>
-			<div class="col-10">
-				<a href="{{ post.url }}" title="{{ post.title }}">
+    {% for post in site.posts %}
+    <div class="row p-3">
+        <div class="col-2">
+            {{ post.date | date_to_string }}
+        </div>
+        <div class="col-10">
+            <a href="{{ post.url }}" title="{{ post.title }}">
 					{{ post.title }}
-				</a>
-				{{ post.description }}
-			</div>
-		</div>
-	{% endfor %}
+				</a> {{ post.description }}
+        </div>
+    </div>
+    {% endfor %}
 </div>
