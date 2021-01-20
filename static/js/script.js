@@ -2,9 +2,8 @@ $("document").ready(function() {
 	var offset = 600,
 		duration = 1000,
 		to_year = new Date().getFullYear(),
-		links = ['.main-page', '.skills-link', '.home-link',
-			'.resume', '.blogs', '.rewards-link'
-		];
+		links = ['.skills-link', '.rewards-link'];
+
 	$('div.copyright center, div.footer footer').html('&copy; Mukul Taneja - ' + to_year);
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
@@ -22,17 +21,12 @@ $("document").ready(function() {
 	});
 	$.each(links, function(index, value) {
 		$(value).click(function(e) {
-			//e.preventDefault();
+			e.preventDefault();
 			$('html, body').animate({
 				scrollTop: $($.attr(this, 'href')).offset().top
 			}, 1500);
-
-			if (value == '.about-me-link')
-				lifeCycle();
-
 			if (value == '.skills-link')
 				skillsArcs();
-
 			return false;
 		});
 	});
