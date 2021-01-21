@@ -3,28 +3,32 @@ layout: default
 ---
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+    window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
+    return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+
 <div class="container-fluid">
     <div class="row mt-2 p-2">
         <div class="col-3">
@@ -44,28 +48,30 @@ layout: default
             <h2>{{ page.title }}</h2>
         </div>
     </div>
-    <hr />
-    <div class="container">
-        <div class="row p-3">
-            <div class="col-7">
-                <p class="meta">{{ page.date | date_to_string }}</p>
-            </div>
-            <div class="col-2">
-            	{{ page.fb }}
-            </div>
-            <div class="col-2">
-            	{{ page.linkedin }}
-            </div>
-            <div class="col-1">
-            	{{ page.twitter }}
-            </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row p-3">
+        <div class="col-7">
+            <p class="meta">{{ page.date | date_to_string }}</p>
         </div>
-        <hr />
-        <div class="row p-3">
-            <div class="col">
-                <div class="post">
-                    {{ content }}
-                </div>
+        <div class="col-2">
+            {{ page.fb }}
+        </div>
+        <div class="col-2">
+            {{ page.linkedin }}
+        </div>
+        <div class="col-1">
+            {{ page.twitter }}
+        </div>
+    </div>
+</div>
+<div class="container"><hr /></div>
+<div class="container">
+    <div class="row p-3">
+        <div class="col">
+            <div class="post">
+                {{ content }}
             </div>
         </div>
     </div>

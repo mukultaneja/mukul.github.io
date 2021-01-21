@@ -1,10 +1,11 @@
 ---
  layout: default
- title: Mukul Taneja's Blog
+ title: Mukul Taneja - Blogs
 ---
-<div class="container-fluid">
-    <div class="row mt-2 p-2">
-        <div class="col-5">
+<div class="container-fluid p-1">
+    <div class="row mt-5">
+        <div class="col-1"></div>
+        <div class="col-4">
             <nav class="navbar navbar-expand-lg">
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav w-100">
@@ -17,23 +18,30 @@
                 </div>
             </nav>
         </div>
-        <div class="col-7">
-            <h2>Mukul Taneja - Blogs</h2>
+        <div class="col-5">
+            <h2>Recent Posts</h2>
         </div>
+        <div class="col-1"></div>
     </div>
-</div>
-<hr />
-<div class="container blog-content">
-    {% for post in site.posts %}
-    <div class="row p-3">
-        <div class="col-2">
-            {{ post.date | date_to_string }}
+    <hr />
+    <div class="row w-100">
+        <div class="col-3"></div>
+        <div class="col-6 blog-content">
+            <ul>
+            {% for post in site.posts %}
+            <li>
+                <div class="row p-3">
+                    <div class="col-10">
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        <br />
+                        {{ post.description }}
+                    </div>
+                </div>
+            </li>
+            <hr />
+            {% endfor %}
+            </ul>
         </div>
-        <div class="col-10">
-            <a href="{{ post.url }}" title="{{ post.title }}">
-					{{ post.title }}
-				</a> {{ post.description }}
-        </div>
+        <div class="col-3"></div>
     </div>
-    {% endfor %}
 </div>

@@ -22,7 +22,7 @@ ul {list-style-type: none;}
 	from,to{border-color:transparent;}
 	100%{border-color:black;}
 }
-.blog-content{height:830px;font-size:18px;}
+.blog-content{height:950px;font-size:18px;}
 .navbar a{letter-spacing:2px;}
 .back-to-top{margin:0;position:fixed;bottom:15px;right:10px;z-index:100;display:none;text-decoration:none;text-decoration:none;color:black;background-color:white;border-color:black;}
 .back-to-top:hover{background-color:white;border-color:black;}
