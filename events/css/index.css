@@ -1,0 +1,83 @@
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+body {
+    background-color: #E9E9E9
+}
+
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .back-to-top {
+        margin: 0;
+        position: fixed;
+        bottom: 15px;
+        right: 10px;
+        z-index: 100;
+        display: none;
+        text-decoration: none;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border-color: black;
+    }
+    .back-to-top:hover {
+        background-color: white;
+        border-color: black;
+    }
+    .section-height {
+        height: 30px;
+    }
+    .block-height {
+        height: 1300px;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        top: 150px !important
+    }
+    .decor-image {
+        height: 163px;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .back-to-top {
+        margin: 0;
+        position: fixed;
+        bottom: 15px;
+        right: 10px;
+        z-index: 100;
+        display: none;
+        text-decoration: none;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        border-color: black;
+    }
+    .back-to-top:hover {
+        background-color: white;
+        border-color: black;
+    }
+    .section-height {
+        height: 30px;
+    }
+    .block-height {
+        height: 1300px;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        top: 150px !important
+    }
+    .decor-image {
+        height: 163px;
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
