@@ -1,3 +1,5 @@
+
+
 @font-face{font-family:raleway;src:url(fonts/Roboto/Roboto-Regular.ttf) format("truetype");font-size:12px;}
 
 /* tag based css */
@@ -5,7 +7,6 @@ body{font-family:raleway;background-image:url('../images/body-background.jpg');p
 body,html{height:100%;}
 a:hover{text-decoration:none;}
 blockquote{font-size:18px;}
-figure img{margin-top:80px}
 ul {list-style-type: none;}
 /* class based css */
 .typewriter,.typewriter-1,.typewriter-2,.typewriter-3{color:#000;font-family:fantasy;font-size:55px;font-weight:bolder;overflow:hidden;border-right:.15em solid orange; /* The typwriter cursor */white-space:nowrap; /* Keeps the content on a single line */margin:0 auto; /* Gives that scrolling effect as the typing happens */letter-spacing:.15em; /* Adjust as needed */animation:typing 4s steps(60,end),blink-caret .2s infinite;}
@@ -38,6 +39,14 @@ ul {list-style-type: none;}
 .blog-link{padding:16px 0px 0px 40px;}
 .posts li{list-style:none;}
 pre code{background-color:#eee;border:1px solid #999;display:block;padding:20px;}
+.footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
 @media (min-width:768px){
 	.intro h2,.intro h4{font-size:24px;}
 	.navbar,.navbar-nav{display:inline-block;width:100%}

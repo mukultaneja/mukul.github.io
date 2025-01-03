@@ -27,7 +27,7 @@ function skillsArcs() {
 
 	var svg = d3.select('div.skills')
 		.select('svg')
-		.attr("viewBox", "-50 0 1400 580")
+		.attr("viewBox", "100 0 1080 600")
 		.attr("preserveAspectRatio", "xMinYMin meet");
 
 	svg.selectAll('*').remove();

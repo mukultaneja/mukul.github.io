@@ -13,14 +13,54 @@
 <body>
     <div id="twitter-wjs"></div>
     <div id="wrapper">
-        {{ content }}
-        <div class="footer">
-            <footer class="text-center"></footer>
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="mt-2">
+                        <nav class="navbar navbar-expand-lg">
+                            <ul class="navbar-nav w-100">
+                                <li class="nav-item w-20 pr-5 pl-5 text-center">
+                                    <a href="/" class="home-link">
+                                        <span class="font-weight-bold">Home</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item w-20 pr-5 pl-5 text-center">
+                                    <a href="/skills" class="skills-link">
+                                        <span class="font-weight-bold">Skills</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item w-20 pr-5 pl-5 text-center">
+                                    <a href="/activities" class="rewards-link">
+                                        <span class="font-weight-bold">Activities</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item w-20 pr-5 pl-5 text-center">
+                                    <a href="/blogs" class="blogs">
+                                        <span class="font-weight-bold">Blogs</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item w-20 pl-5 text-center">
+                                    <a href="resume/resume.pdf" class="resume" target="_blank">
+                                        <span class="font-weight-bold">Resume</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <hr />
         </div>
+        {{ content }}
     </div>
-    <a class="btn btn-primary back-to-top">
+    <div class="footer">
+        <footer class="text-center"></footer>
+    </div>
+    <!--a class="btn btn-primary back-to-top">
         <img src="/static/images/uparrow.jpg" />
-    </a>
+    </a-->
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
