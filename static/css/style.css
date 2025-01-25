@@ -20,6 +20,10 @@ div.intro {
 	height: 500px
 }
 
+div.content {
+	height: 1080px
+}
+
 /* The typing effect */
 @keyframes typing{
 	from{width:0;}
@@ -48,7 +52,6 @@ div.intro {
 .posts li{list-style:none;}
 pre code{background-color:#eee;border:1px solid #999;display:block;padding:20px;}
 .footer {
-    position: fixed;
     height: 50px;
     bottom: 0px;
     left: 0px;

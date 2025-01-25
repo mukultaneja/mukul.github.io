@@ -56,9 +56,9 @@ title: Mukul Taneja
                 </div>
             </div>
         </div>
-        <div class="row content">
+        <div class="row">
             <div class="col-12">
-                <div class="pl-5 mt-5">
+                <div class="mt-5">
                     <p>
                         The inclination towards innovation and inquisitiveness about building new things outlined my passion since the beginning. Technology, has all the power the innovate, enhance and execute things and that very fact drove me towards it. I lately realized, that this is something I love and crave to explore more it each day.
                     </p>
